@@ -1,0 +1,736 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    margin-top: 30%;
+}
+
+/*header*/
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 12;
+    top: 0;
+    background-color: white;
+}
+.H-1{
+    display: flex;
+    background-color: green;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+header img{
+    width: 100%;
+    
+}
+#clover-image {
+    width: 40px;
+    background-color: green;
+}
+#clover-logo{
+    padding: 0;
+}
+#log-in-icon{
+    width: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    max-height: 30px;
+   
+}
+.clover, .log-in{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 10px;
+}
+.H-2{
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(120, 116, 116);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 5px rgb(198, 196, 196);
+    position: relative;
+}
+#categories{
+    margin-left: 20px;
+}
+#categories i{
+    font-size: 14px;
+    margin-left: 5px;
+}
+.online-infos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 7%;
+}
+#clover-logo{
+    width: 100px;
+    margin: 10px;
+}
+.schedule-displayer{
+    display: flex;
+    gap: 5px;
+}
+.schedule-displayer .angle{
+    margin-left: 5px;
+    font-size: 12px;
+}
+.schedule-slide-angle{
+    transition: transform 0.2s;
+}
+.Hor-clo-ang{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/*order options*/
+.order-options{
+    margin-top: 10%;
+}
+.categorie-name{
+    font-size: 14px;
+    color: rgb(131, 128, 128);
+    margin-bottom:30px;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 0 10px;
+    height: 15vh;
+    box-shadow: 0 1px 3px rgb(182, 180, 180);
+    border-radius: 10px;
+}
+.item-name{
+    font-size: 20px;
+
+}
+.cat-blocks{
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+.items-grid{
+    display: grid;
+    gap: 25px;
+}
+
+/*footer*/
+footer{
+    text-align: center;
+    background-color: rgb(43, 43, 95);
+    color: white;
+    padding: 5% 0;
+    font-size: 18px;
+    line-height: 1.5em;
+    bottom: 0;
+    
+}
+.cart-icon{
+    display: none;
+}
+.log-in-2{
+    display: none;
+}
+
+
+
+/*hidden elements*/
+.cat-slide{
+    position: fixed;
+    z-index: 12;
+    bottom: 0;
+    color: rgb(74, 71, 71);
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    height: 0;
+    overflow: hidden;
+    padding-top: 10px;
+    transition: height 0.3s;
+    
+}
+.cat-angle-down{
+    transition: transform 0.3s;
+}
+#cat-slide-header{
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.cat-list{
+    list-style-type: none;
+    padding: 10px 15px;
+    
+}
+.cat-list li{
+    padding: 15px 15px;
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+}
+
+#bagels{
+    border-bottom: none;
+}
+.Ord-hours-slide{
+    padding: 20px 20px 0 20px ;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    height:0;
+    z-index: 10;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;  
+    transition: height 0.5s;
+}
+.Ord-hours-slide h2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+   
+}
+.schedule-list{
+    list-style-type: none;
+
+}
+.day-shedule{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.exit{
+   display: flex;
+   justify-content: end;
+   font-size: 2em;
+   color: rgb(116, 112, 112);
+   margin-bottom: 10px;
+   position: relative;
+}
+.H-categories{
+    
+    position: absolute;
+    width: 360px;
+    z-index: 12;
+    background-color: white;
+    border-radius: 5px;
+    top: 12vh;
+    transition: height 0.5s;
+    height: 0;
+    overflow: hidden;
+    
+}
+.H-categories a{
+    text-decoration: none;
+    color: black;
+}
+.H-categories ul{
+    list-style-type: none;
+}
+.H-categories li{
+    border-bottom: 1px solid rgb(183, 179, 179);
+    padding: 15px 0;
+}
+/*Order characteristics*/
+.Add-ons{
+    width: 400px;
+    border-radius: 10px;
+    height: 70vh;
+    overflow: hidden;
+    position: absolute;
+    top: 23%;
+    left: 17%;
+    box-shadow: 0 5px 10px gray;
+    background-color: white;
+}
+.coffeeLike-Char{
+    display: none;
+}
+.Add-ons ul{
+    list-style-type: none;
+   
+}
+.Add-ons .exit{
+    font-size: 25px;
+}
+.Add-ons h2{
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.c-b-header{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(113, 113, 113);
+    margin-bottom: 20px;
+}
+.char-block li{
+    display: flex;
+    gap: 15px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+    padding: 18px 0;
+}
+.checkbox-group{
+    display: flex;
+    gap: 15px;
+    
+}
+.char-block input{
+    width: 2em;
+}
+.c-b-header2{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(113, 113, 113);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.char-block{
+    margin-bottom: 40px;
+}
+.add-order{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+.order-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding: 20px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    background-color: rgb(232, 244, 214);
+    font-size: 18px;
+    font-weight: bold;
+
+    
+}
+.quantity p{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.quantity i{
+    
+    color: gray;
+    font-size: 14px;
+}
+.char-container{
+    padding: 20px 20px 0 20px;
+}
+.scroll-bar{
+   overflow: auto;
+   
+}
+.latteLIke-Char{
+    display: none;
+}
+.Iced-Latte-like-Char{
+    display: none;
+}
+.london-fog-like-char{
+    display: none;
+}
+.hojicha-like-Char{
+    display: none;
+}
+.EarlGrey-like-Char{
+    display: none;
+}
+.sencha{
+    height: 25vh;
+    display: none;
+}
+.sencha-container .add-order{
+  position: absolute;
+}
+.beverages{
+    height: 65vh;
+    display: none;
+}
+.add-order i:hover{
+    cursor: pointer;
+}
+.order-button:hover{
+    cursor: pointer;
+}
+input:hover{
+    cursor: pointer;
+}
+.char-block li:hover{
+    cursor: pointer;
+}
+
+
+
+/*cart*/
+ .cart-bar{
+    position: fixed;
+    z-index: 16;
+    bottom: 0;
+    background-color: green;
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    display: none;
+    
+
+
+
+}
+#cart-bar-price{
+    font-size: 20px;
+    
+}
+.cart-bar-logo-container i{
+    font-size: 27px;
+}
+.cart-bar-counter{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    font-size: 3px;
+    position: relative;
+
+}
+.cart-bar-logo-container{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.cart-bar-counter p{
+    color: black;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3px;
+}
+.cart-page{
+    height:0;
+    z-index: 100;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: height 1s;
+    box-shadow: 3px 3px 20px gray;
+
+    
+    
+}
+.cart-page-header{
+    width: 100%;
+    position: absolute;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 5px rgb(225, 222, 222);
+}
+.cart-page-exit{
+    font-size: 25px;
+}
+.cart-page-footer{
+    position: absolute;
+    bottom: 0;
+    background-color: green;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.cart-page-elements{
+    margin-top: 10vh;
+}
+.H-2-cart-bar{
+    top: 0;
+    width: 20%;
+    background-color: rgb(1, 98, 1);
+    position: absolute;
+    right: 0;
+    height: 100%;
+    display: none;
+}
+.H-2-cart-bar-container{
+   display: flex;
+}
+.H-2-cart-bar-logo-container i{
+    font-size: 23px;
+}
+.H-2-cart-bar-logo-container{
+    display: flex;
+}
+
+/*screen width= 985px*/
+@media only screen and (min-width:900px){
+.H-2{
+    all:initial;
+}
+.log-in{
+    display: none;
+}
+.cart-icon{
+    display: block;
+}
+header{
+    display: flex;
+    color: white;
+    background-color: green;
+    align-items: center;
+    height: 15vh;  
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding-top: 0;
+}
+.H-categories{
+    top: 15vh;
+}
+#categories{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.H-1 p{
+    font-size: 28px;
+}
+.cart-icon i{
+    font-size: 25px;
+    
+}
+.H1-H2{
+    display: flex;
+    align-items: center;
+    gap:2em;
+
+}
+.online-infos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20vh;
+   
+}
+.log-in-2{
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 1px 10px rgb(211, 208, 208);
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 200px;
+    justify-content: center;
+    border: 1px solid rgb(206, 204, 204);
+    align-self: center;
+    
+    
+}
+.log-in-2 img{
+    width: 25px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    max-height: 30px;
+}
+.schedule-displayer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30%;
+    justify-content: center;
+    
+}
+.Hor-clo-ang{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.online-infos h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}
+.store-address{
+    line-height: 25px;
+}
+.items-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.categorie-name{
+    margin-left: 2em;
+}
+.Ord-hours-slide{
+    bottom: initial;
+    height: 360px;
+    top: 30%;
+    left: 35%;
+    width: 500px;
+    display: none;
+    padding: 20px 20px 0 22px;
+
+}
+.Add-ons{
+    width: 500px;
+    border-radius: 10px;
+    height: 70vh;
+    overflow: hidden;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    box-shadow: 0 5px 10px gray;
+    background-color: white;
+}
+.scroll-bar{
+    overflow: auto;
+    
+ }
+ main{
+    margin-top: 10%;
+}
+.H-2-cart-bar{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 40px;
+}
+.cart-bar-counter{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -13px;
+    top:15px;
+    
+}
+.cart-bar-counter p{
+    font-size: 16px;
+}
+.cart-page{
+    display: block;
+    height: 85vh;
+    margin-top: 15vh;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s;
+
+
+}
+.cart-page-footer{
+    width: 95%;
+    left: 12px;
+    bottom: 30px;
+    border-radius: 20px;
+}
+}
+
+
+
+
+/*js css*/
+.cat-slide-js{
+    height: 390px;
+    
+}
+.cat-arrow-js{
+    transform: rotate(180deg);
+}
+
+.html-js{
+    background-color: rgb(156, 156, 156);
+    z-index: -2;
+}
+
+.schedule-slide-display{
+    height: 360px;
+
+}
+
+.H-categories-js{
+    height: 25vh;
+    box-shadow: 0 5px 10px rgb(205, 201, 201);
+    overflow: auto;
+    padding: 15px 15px;
+
+}
+.ord_hours_slide2-js{
+    display: block;
+}
+
+.block-display-js{
+    display: block;
+}
+
+.no-scroll{
+    overflow: hidden;
+}
+
+.cart_item_row{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid black;
+
+}
+.C_price_delete{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.cart-page-sm{
+    height: 100vh;
+}
+.cart-page-lg{
+    width:40%;
+}

@@ -1,0 +1,64 @@
+[
+    {
+        "name": "12oz Small Coffee",
+         "price": 2.85,
+         "id":0
+
+    },
+    {
+        "name": "16oz Large Coffee",
+         "price": 3.15,
+         "id":1
+    },
+    {
+        "name": "Latte",
+         "price": 3.15,
+         "id":2
+    },
+    {
+        "name": "Iced Latte",
+         "price": 4.50,
+         "id":3
+    },
+    {
+        "name": "London Fog",
+         "price": 4.50,
+         "id":4
+    },
+    {
+        "name": "Hojicha",
+         "price": 4.25,
+         "id":5
+    },
+    {
+        "name": "Earl Grey",
+         "price": 3.50,
+         "id":6
+    },
+    {
+        "name": "Sencha",
+         "price": 3.50,
+         "id":7
+    },
+    {
+        "name": "16oz Hot Chocolate",
+         "price": 4.20,
+         "id":8
+    },
+    {
+        "name": "Kids Milk",
+         "price": 2.00,
+         "id":9
+    },
+    {
+        "name": "12oz Hot Chocolate",
+         "price": 3.15,
+         "id":10
+    },
+    {
+        "name": "10oz Lavender Steamer",
+         "price": 2.50,
+         "id":11
+    }
+
+]

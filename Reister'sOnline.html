@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head >
+    <meta charset="UTF-8" />
+    <meta name="description" content="This page is for the shop's online orders" />
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+    <link rel="stylesheet" href="Reister'sOnline.css" />
+    <script
+      src="https://kit.fontawesome.com/7416b17ed6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Online Orders</title>
+  </head>
+  <body>
+    <!--page header-->
+    <header>
+      <div class="H1-H2">
+        <div class="H-1">
+          <div class="clover">
+            <div id="clover-image">
+              <img src="MainImages/clover.png" alt="OOPS!" />
+            </div>
+
+            <p>Clover</p>
+          </div>
+          <div class="log-in">
+            <div id="log-in-icon">
+              <img src="MainImages/framelessLogIn.png" alt="OOPS!" />
+            </div>
+
+            <p>Log in</p>
+          </div>
+        </div>
+        <div class="H-2">
+          <p id="categories">
+            <span class="categories-text">Categories</span><i class="fa-solid fa-angle-down cat-angle-down"></i>
+          </p>
+          <div class="H-categories">
+            <ul>
+              <li><a href="#optionCoffee">Coffee</a></li>
+              <li><a href="#optionTea">Tea</a></li>
+              <li><a href="#optionBeverages">Beverages, Other</a></li>
+              <li><a href="">Panini</a></li>
+              <li><a href="">Smoothie</a></li>
+              <li><a href="">Food</a></li>
+              <li><a href="">Grab & Go</a></li>
+              <li><a href="">Bagels</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-icon">
+        <i class="fa-solid fa-basket-shopping"></i>
+      </div>
+      <div class="H-2-cart-bar-container shoppingCart">
+        <div class="H-2-cart-bar">
+          <div>
+            <h2>Cart</h2>
+            <p> $<span class="cart-bar-price">0.00</span>+tax</p>
+          </div>
+          <div class="H-2-cart-bar-logo-container">
+            <div><i class="fa-solid fa-basket-shopping"></i></div>
+            <div class="cart-bar-counter"><p class="cart-bar-items-count">0</p></div>
+          </div>
+        </div>
+      </div>
+      
+    </header>
+    <main>
+      <div class="online-infos">
+        <img id="clover-logo" src="MainImages/Clover-logo.jpeg" alt="OOPS!" />
+        <div class="store-address">
+          <h2>THE REISTER'S DAUGHTER C</h2>
+          <p>202 MAIN STREET, REISTERSTOWN MD</p>
+          <p>(443) 416-2347</p>
+        </div>
+
+        <div class="schedule-displayer">
+          <div class="log-in-2">
+            <div id="log-in-icon-2">
+              <img src="MainImages/framelessLogIn.png" alt="OOPS!" />
+            </div>
+
+            <p>Log in</p>
+          </div>
+          <div class="Hor-clo-ang">
+            <i class="fa-regular fa-clock"></i>
+            <p>closed<i class="fa-solid fa-angle-down schedule-slide-angle"></i></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-options">
+        <div class="cat-blocks" id="optionCoffee">
+          <p class="categorie-name" > <span class="coffee categorie-name2">COFFEE</span></p>
+          <div class="items-grid">
+            <div id="1" class="item">
+              <p class="item-name">12oz Small Coffee</p>
+              <p class="price">$2.85</p>
+            </div>
+            <div id ="2" class="item">
+              <p class="item-name">16oz Large Coffee</p>
+              <p class="price">$3.15</p>
+            </div>
+            <div id="3" class="item">
+              <p class="item-name">Latte</p>
+              <p class="price">$4.50</p>
+            </div>
+            <div id="4" class="item">
+              <p class="item-name">Iced Latte</p>
+              <p class="price">$4.50</p>
+            </div>
+          </div>
+        </div>
+        <div class="cat-blocks">
+          <p class="categorie-name" id="optionTea"><span class="tea categorie-name2">TEA</span></p>
+          <div class="items-grid">
+            <div id="5" class="item">
+              <p class="item-name">London Fog</p>
+              <p class="price">$4.50</p>
+            </div>
+            <div id="6" class="item">
+              <p class="item-name">Hojicha</p>
+              <p class="price">$4.25</p>
+            </div>
+            <div id="7" class="item">
+              <p class="item-name">Earl Grey</p>
+              <p class="price">$3.50</p>
+            </div>
+            <div id="8" class="item">
+              <p class="item-name">Sencha</p>
+              <p class="price">$3.50</p>
+            </div>
+          </div>
+        </div>
+        <div class="cat-blocks">
+          <p class="categorie-name" id="optionBeverages"> <span class="beverages-other categorie-name2">BEVERAGES, OTHER</span></p>
+          <div class="items-grid">
+            <div id="9" class="item">
+              <p class="item-name">16oz Hot Chocolate</p>
+              <p class="price">$4.20</p>
+            </div>
+            <div id="10" class="item">
+              <p class="item-name">Kids Milk</p>
+              <p class="price">$2.00</p>
+            </div>
+            <div id="11" class="item">
+              <p class="item-name">12oz Hot Chocolate</p>
+              <p class="price">$3.80</p>
+            </div>
+            <div id="12" class="item">
+              <p class="item-name">10oz Lavender Steamer</p>
+              <p class="price">$2.50</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!--footer-->
+    <div class="composed-footer">
+      <footer>
+        <p>Powered by &copy; 2024 Clover Network, Inc.</p>
+        <p>Terms Privacy Policy</p>
+        <p>Clover and the Clover logo are trademarks of Clover Network, Inc.</p>
+        <p>Other trademarks are the property of their respective owners</p>
+        <p>
+          This site is protected by reCAPTCHA and the google Privacy Policy and
+          Terms of Service apply.
+        </p>
+      </footer>
+     <div class="cart-bar">
+        <div>
+          <h2>Cart</h2>
+          <p> $<span class="cart-bar-price">0.00</span>+tax</p>
+        </div>
+        <div class="cart-bar-logo-container">
+          
+          <div><i class="fa-solid fa-basket-shopping"></i></div>
+          <div class="cart-bar-counter"><p class="cart-bar-items-count">0</p></div>
+        </div>
+      </div>
+      <div class="cart-page ">
+        <div class="cart-page-header">
+          <h2>Cart</h2>    
+          <i class="fa-solid fa-xmark cart-page-exit"></i>
+        </div>
+        <div class="cart-page-elements">
+          
+        </div>
+        <div class="cart-page-footer">
+          <p>Continue to checkout</p>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+    
+
+    <!--categories slide-->
+    <div class="cat-slide">
+      <p id="cat-slide-header">categories</p>
+      <ul class="cat-list">
+        <li id="coffee">Coffee</li>
+        <li id="tea">Tea</li>
+        <li id="beverages-other">Beverages, Other</li>
+        <li>Panini &emsp; *Not Available*</li>
+        <li>Smoothie &emsp; *Not Available*</li>
+        <li>Grab & Go &emsp; *Not Available*</li>
+        <li>Bagels &emsp; *Not Available*</li>
+      </ul>
+    </div>
+    <!--Ordering hours slide-->
+
+    <div class="Ord-hours-slide">
+      <i class="fa-solid fa-xmark exit"></i>
+      <h2>Ordering hours</h2>
+
+      <ul class="schedule-list">
+        <div class="day-shedule">
+          <li>Sunday</li>
+          <li class="time">8:30 AM - 2:00 PM EDT</li>
+        </div>
+
+        <div class="day-shedule">
+          <li>Monday</li>
+          <li class="time">closed</li>
+        </div>
+        <div class="day-shedule">
+          <li>Tuesday</li>
+          <li class="time">7:00 AM - 2:30 PM EDT</li>
+        </div>
+        <div class="day-shedule">
+          <li>Wednesday</li>
+          <li class="time">7:00 AM - 2:30 PM EDT</li>
+        </div>
+        <div class="day-shedule">
+          <li>Thursday</li>
+          <li class="time">7:00 AM - 2:30 PM EDT</li>
+        </div>
+        <div class="day-shedule">
+          <li>Friday</li>
+          <li class="time">7:00 AM - 2:30 PM EDT</li>
+        </div>
+        <div class="day-shedule">
+          <li>Saturday</li>
+          <li class="time">8:30 AM - 2:00 PM EDT</li>
+        </div>
+      </ul>
+    </div>
+
+    <!--Order Characteristics-->
+    <div class="Add-ons coffeeLike-Char scroll-bar">
+      <div class="char-container">
+        <div class="coffeeLike-char-header">
+          <i class="fa-solid fa-xmark O-C-exit"></i>
+          <h2 class="block-name-js">12oz Small Coffee</h2>
+        </div>
+
+        <div class="char-block">
+          <p class="c-b-header">DRINK MODIFIER</p>
+          <ul>
+            <li>
+              <div class="checkbox-group">
+                <input type="checkbox" id="extra-hot" />
+                <p>Extra Shot (Note: All Shots Are Double Shots)</p>
+              </div>
+
+              <p class="extra">+$1.50</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Half & Half (for drip coffee or tea)</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Milk (for drip coffee or tea)</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Oat Milk</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Coconut Milk</p>
+            </li>
+            <li>
+              <input type="checkbox" id="sweet-cream" />
+              <p>Add Sweet Cream</p>
+              <p class="extra">+$0.20</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Cream & Sugar</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="char-block">
+          <p class="c-b-header2">ROAST</p>
+          <ul>
+            <li>
+              <input type="checkbox" />
+              <p>Medium</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Dark</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Decaf</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="add-order">
+        <div class="quantity">
+          <p>
+            <i class="fa-solid fa-minus minus"></i>
+            <span class="add-quantity">1</span>
+            <i class="fa-solid fa-plus plus"></i></p>
+        </div>
+        <div class="order-button">
+          <p>Add to order</p>
+          <p>$2.85</p>
+        </div>
+      </div>
+    </div>
+
+    <!--latte like-->
+    <div class="Add-ons latteLIke-Char scroll-bar">
+      <div class="char-container">
+        <div class="coffeeLike-char-header">
+          <i class="fa-solid fa-xmark O-C-exit"></i>
+          <h2 class="block-name-js">Latte</h2>
+        </div>
+
+        <div class="char-block">
+          <p class="c-b-header">DAIRY</p>
+          <ul>
+            <li>
+              <input type="radio" />
+              <p>whole</p>
+            </li>
+            <li>
+              <input type="radio" />
+              <p>1%</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="almond-milk" />
+                <p>Almond Milk</p>
+              </div>
+
+              <p class="extra">+$1.00</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="oat-milk" />
+                <p>Oat Milk</p>
+              </div>
+
+              <p class="extra">+$1.00</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="coconut-milk" />
+                <p>Coconut Milk</p>
+              </div>
+
+              <p class="extra">+$1.00</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="char-block">
+          <p class="c-b-header">DRINK MODIFIER</p>
+          <ul>
+            <li>
+              <div class="checkbox-group">
+                <input type="checkbox" id="extra-hot" />
+                <p>Extra Shot (Note: All Shots Are Double Shots)</p>
+              </div>
+
+              <p class="extra">+$1.50</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Half & Half (for drip coffee or tea)</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Milk (for drip coffee or tea)</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Oat Milk</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Coconut Milk</p>
+            </li>
+            <li>
+              <input type="checkbox" id="sweet-cream" />
+              <p>Add Sweet Cream</p>
+              <p class="extra">+$0.20</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Cream & Sugar</p>
+            </li>
+          </ul>
+        </div>
+        <div class="char-block">
+          <p class="c-b-header2">LARGE SIZE</p>
+          <ul>
+            <li>
+              <div class="checkbox-group">
+                <input type="checkbox" id="large-size" />
+                <p>Large</p>
+              </div>
+
+              <p class="extra">+$0.30</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="add-order">
+        <div class="quantity">
+          <p>
+            <i class="fa-solid fa-minus minus"></i>
+            <span class="add-quantity">1</span>
+            <i class="fa-solid fa-plus plus"></i></p>
+        </div>
+        <div class="order-button">
+          <p>Add to order</p>
+          <p>$4.50</p>
+        </div>
+      </div>
+    </div>
+    <!--Iced latte like-->
+    <div class="Add-ons Iced-Latte-like-Char scroll-bar">
+      <div class="char-container">
+        <div class="coffeeLike-char-header">
+          <i class="fa-solid fa-xmark O-C-exit"></i>
+          <h2 class="block-name-js"> Iced Latte</h2>
+        </div>
+        <div class="char-block">
+          <p class="c-b-header">COLD DRINK VARIATIONS</p>
+          <ul>
+            <li>
+              <input type="checkbox" />
+              <p>Unsweetened</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Sweetened (Non Dairy)</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="char-block">
+          <p class="c-b-header2">DAIRY</p>
+          <ul>
+            <li>
+              <input type="radio" />
+              <p>whole</p>
+            </li>
+            <li>
+              <input type="radio" />
+              <p>1%</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="almond-milk" />
+                <p>Almond Milk</p>
+              </div>
+
+              <p class="extra">+$1.00</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="oat-milk" />
+                <p>Oat Milk</p>
+              </div>
+
+              <p class="extra">+$1.00</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="coconut-milk" />
+                <p>Coconut Milk</p>
+              </div>
+
+              <p class="extra">+$1.00</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="char-block">
+          <p class="c-b-header">DRINK MODIFIER</p>
+          <ul>
+            <li>
+              <div class="checkbox-group">
+                <input type="checkbox" id="extra-hot" />
+                <p>Extra Shot (Note: All Shots Are Double Shots)</p>
+              </div>
+
+              <p class="extra">+$1.50</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Half & Half (for drip coffee or tea)</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Milk (for drip coffee or tea)</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Oat Milk</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Coconut Milk</p>
+            </li>
+            <li>
+              <input type="checkbox" id="sweet-cream" />
+              <p>Add Sweet Cream</p>
+              <p class="extra">+$0.20</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Cream & Sugar</p>
+            </li>
+          </ul>
+        </div>
+        <div class="char-block">
+          <p class="c-b-header2">LARGE SIZE</p>
+          <ul>
+            <li>
+              <div class="checkbox-group">
+                <input type="checkbox" id="large-size" />
+                <p>Large</p>
+              </div>
+
+              <p class="extra">+$0.30</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="add-order">
+        <div class="quantity">
+          <p><i class="fa-solid fa-minus minus"></i>
+            <span class="add-quantity">1</span>
+            <i class="fa-solid fa-plus plus"></i></p>
+        </div>
+        <div class="order-button">
+          <p>Add to order</p>
+          <p>$4.50</p>
+        </div>
+      </div>
+    </div>
+    <!--London Fog-->
+    <div class="Add-ons london-fog-like-char scroll-bar">
+      <div class="char-container">
+        <div class="coffeeLike-char-header">
+          <i class="fa-solid fa-xmark O-C-exit"></i>
+          <h2 class="block-name-js">London Fog</h2>
+        </div>
+        <div class="char-block">
+          <p class="c-b-header2">LARGE SIZE</p>
+          <ul>
+            <li>
+              <div class="checkbox-group">
+                <input type="checkbox" id="large-size" />
+                <p>Large</p>
+              </div>
+
+              <p class="extra">+$0.30</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="char-block">
+          <p class="c-b-header2">DAIRY SM</p>
+          <ul>
+            <li>
+              <input type="radio" />
+              <p>whole</p>
+            </li>
+            <li>
+              <input type="radio" />
+              <p>2%</p>
+            </li>
+            <li>
+              <input type="radio" />
+              <p>1%</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="almond" />
+                <p>Almond</p>
+              </div>
+
+              <p class="extra">+$0.60</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="oat" />
+                <p>Oat</p>
+              </div>
+
+              <p class="extra">+$0.60</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="coconut" />
+                <p>Coconut</p>
+              </div>
+
+              <p class="extra">+$0.60</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="add-order">
+        <div class="quantity">
+          <p>
+            <i class="fa-solid fa-minus minus"></i>
+            <span class="add-quantity">1</span>
+            <i class="fa-solid fa-plus plus"></i></p>
+        </div>
+        <div class="order-button">
+          <p>Add to order</p>
+          <p>$4.50</p>
+        </div>
+      </div>
+    </div>
+    <!--Hojicha like-->
+    <div class="Add-ons hojicha-like-Char scroll-bar">
+      <div class="char-container">
+        <div class="coffeeLike-char-header">
+          <i class="fa-solid fa-xmark O-C-exit"></i>
+          <h2 class="block-name-js">Hojicha</h2>
+        </div>
+
+        <div class="char-block">
+          <p class="c-b-header2">DAIRY</p>
+          <ul>
+            <li>
+              <input type="radio" />
+              <p>whole</p>
+            </li>
+            <li>
+              <input type="radio" />
+              <p>1%</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="almond-milk" />
+                <p>Almond Milk</p>
+              </div>
+
+              <p class="extra">+$1.00</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="oat-milk" />
+                <p>Oat Milk</p>
+              </div>
+
+              <p class="extra">+$1.00</p>
+            </li>
+            <li>
+              <div class="checkbox-group">
+                <input type="radio" id="coconut-milk" />
+                <p>Coconut Milk</p>
+              </div>
+
+              <p class="extra">+$1.00</p>
+            </li>
+          </ul>
+        </div>
+        <div class="char-block">
+          <p class="c-b-header">DRINK MODIFIER</p>
+          <ul>
+            <li>
+              <div class="checkbox-group">
+                <input type="checkbox" id="extra-hot" />
+                <p>Extra Shot (Note: All Shots Are Double Shots)</p>
+              </div>
+
+              <p class="extra">+$1.50</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Half & Half (for drip coffee or tea)</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Milk (for drip coffee or tea)</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Oat Milk</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Coconut Milk</p>
+            </li>
+            <li>
+              <input type="checkbox" id="sweet-cream" />
+              <p>Add Sweet Cream</p>
+              <p class="extra">+$0.20</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Cream & Sugar</p>
+            </li>
+          </ul>
+        </div>
+        <div class="char-block">
+          <p class="c-b-header">HOT/ICED</p>
+          <ul>
+            <li>
+              <input type="checkbox" />
+              <p>Hot</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Iced</p>
+            </li>
+          </ul>
+        </div>
+        <div class="char-block">
+          <p class="c-b-header">SWEET/ NO SWEET</p>
+          <ul>
+            <li>
+              <input type="checkbox" />
+              <p>Unsweetened</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Sweetened (Non Dairy)</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="char-block">
+          <p class="c-b-header2">LARGE SIZE</p>
+          <ul>
+            <li>
+              <div class="checkbox-group">
+                <input type="checkbox" id="large-size" />
+                <p>Large</p>
+              </div>
+
+              <p class="extra">+$0.30</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="add-order">
+        <div class="quantity">
+          <p>
+            <i class="fa-solid fa-minus minus"></i>
+            <span class="add-quantity">1</span>
+            <i class="fa-solid fa-plus plus"></i></p>
+        </div>
+        <div class="order-button">
+          <p>Add to order</p>
+          <p>$4.25</p>
+        </div>
+      </div>
+    </div>
+    <!--Earl Grey like-->
+    <div class="Add-ons EarlGrey-like-Char scroll-bar">
+      <div class="char-container">
+        <div class="coffeeLike-char-header">
+          <i class="fa-solid fa-xmark O-C-exit"></i>
+          <h2 class="block-name-js">Earl Grey</h2>
+        </div>
+        <div class="char-block">
+          <p class="c-b-header">DRINK MODIFIER</p>
+          <ul>
+            <li>
+              <div class="checkbox-group">
+                <input type="checkbox" id="extra-hot" />
+                <p>Extra Shot (Note: All Shots Are Double Shots)</p>
+              </div>
+
+              <p class="extra">+$1.50</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Half & Half (for drip coffee or tea)</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Milk (for drip coffee or tea)</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Oat Milk</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Add Coconut Milk</p>
+            </li>
+            <li>
+              <input type="checkbox" id="sweet-cream" />
+              <p>Add Sweet Cream</p>
+              <p class="extra">+$0.20</p>
+            </li>
+            <li>
+              <input type="checkbox" />
+              <p>Cream & Sugar</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="add-order">
+        <div class="quantity">
+          <p>
+            <i class="fa-solid fa-minus minus"></i>
+            <span class="add-quantity">1</span>
+            <i class="fa-solid fa-plus plus"></i></p>
+        </div>
+        <div class="order-button">
+          <p>Add to order</p>
+          <p>$3.50</p>
+        </div>
+      </div>
+    </div>
+    <!--Sencha-->
+    <div class="sencha-container">
+        <div class="Add-ons sencha scroll-bar">
+            <div class="char-container">
+              <div class="coffeeLike-char-header">
+                <i class="fa-solid fa-xmark O-C-exit"></i>
+                <h2 class="block-name-js">Sencha</h2>
+              </div>
+      
+              <p>A japanese green tea</p>
+          </div>
+          <div class="add-order">
+            <div class="quantity">
+              <p>
+                <i class="fa-solid fa-minus minus"></i>
+                <span class="add-quantity">1</span>
+                <i class="fa-solid fa-plus plus"></i></p>
+            </div>
+            <div class="order-button">
+              <p>Add to order</p>
+              <p>$3.50</p>
+            </div>
+          </div>
+    </div>
+     <!--Beverages-->
+     <div class="Add-ons beverages scroll-bar">
+        <div class="char-container">
+          <div class="coffeeLike-char-header">
+            <i class="fa-solid fa-xmark O-C-exit"></i>
+            <h2 class="block-name-js">16oz Hot Chocolate</h2>
+          </div>
+          <div class="char-block">
+            <p class="c-b-header2">DAIRY</p>
+            <ul>
+              <li>
+                <input type="radio" />
+                <p>whole</p>
+              </li>
+              <li>
+                <input type="radio" />
+                <p>1%</p>
+              </li>
+              <li>
+                <div class="checkbox-group">
+                  <input type="radio" id="almond-milk" />
+                  <p>Almond Milk</p>
+                </div>
+  
+                <p class="extra">+$1.00</p>
+              </li>
+              <li>
+                <div class="checkbox-group">
+                  <input type="radio" id="oat-milk" />
+                  <p>Oat Milk</p>
+                </div>
+  
+                <p class="extra">+$1.00</p>
+              </li>
+              <li>
+                <div class="checkbox-group">
+                  <input type="radio" id="coconut-milk" />
+                  <p>Coconut Milk</p>
+                </div>
+  
+                <p class="extra">+$1.00</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="add-order">
+          <div class="quantity">
+            <p>
+              <i class="fa-solid fa-minus minus"></i>
+                  <span class="add-quantity">1</span>
+              <i class="fa-solid fa-plus plus"></i></p>
+          </div>
+          <div class="order-button">
+            <p>Add to order</p>
+            <p>$4.20</p>
+          </div>
+        </div>
+      </div>
+    
+      <script src="/Reister'sOnline.js"></script>
+  </body>
+</html>

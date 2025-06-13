@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta description="This page is dedicated to wholesales." />
+    <meta name="viewport" content="width= device-with, initial-scale= 1.0" />
+    <link rel="stylesheet" href="Main.css" />
+
+    <script
+      src="https://kit.fontawesome.com/7416b17ed6.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Wholesale & Catering</title>
+    <link rel="stylesheet" href="Wholesale.css" />
+  </head>
+  <body>
+    <!--header part-->
+    <header class="site-header">
+
+                <div class="header-main">
+                    <a href="Main.html"><img src="MainImages/coffeShopLogo.jpg" alt="Oops!"></a>
+                <div class="S-H-icons">     
+                    <div class="media3-links-searchIcon"> 
+                        <ul id="media3-links" >
+                            <li><a href="Main.html">Home</a></li>
+                            <li><a href="Reister'sOnline.html" target="_blank">Order Online</a></li>
+                            <li id="media3-about"><a href="Reister'sAbout.html">About</a></li>
+                            <li id="media-jobs">
+                                <div class="media3-jobs2"><a href="#">Jobs</a> <i  id="jobTypes-Arrow" class="fa-solid fa-angle-down"></i></div>
+                                <div class="media3-jobsType">
+                                    <ul id="media3-jobOptions">
+                                        <li id="media3-baker"><a href="Baker.html">Baker</a></li>
+                                        <li><a href="Barista.html">Barista</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="Wholesale.html">Wholesale / Catering</a></li>
+                        </ul>
+                        <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    
+                    <i id="ham-icon" class="fa-solid fa-bars"></i>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="Search ...">
+                    <i id="searchBar-close" class="fa-solid fa-xmark"></i>
+                </div>
+                </div>
+                
+                <div class="ham-menu-container">
+                    <div class="ham-menu">
+                        <ul >
+                            <li class="ham-menu_link"><a href="Main.html">Home</a></li>
+                            <li class="ham-menu_link"><a href="Reister'sOnline.html" target="_blank">Order Online</a></li>
+                            <li id="about" class="ham-menu_link"><a href="Reister'sAbout.html">About</a></li>
+                            <li id="jobs">
+                                <div class="jobs2"><a href="#">Jobs</a></div>
+                                <div class="jobs-type">
+                                    <ul>
+                                        <li class="ham-menu_link"><a href="Baker.html">Baker</a></li>
+                                        <li class="ham-menu_link"><a href="Barista.html">Barista</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="ham-menu_link"><a href="Wholesale.html">Wholesale / Catering</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </header>
+
+    <!--main part-->
+    <main class="W-main">
+      <div class="content-container">
+        <h2>wholesale/Pre-Order/Shop Rental Inquiry</h2>
+        <p>
+          Looking to pre-order coffee or pastries? Need a space to rent for a
+          small event? Fill out our form!
+        </p>
+
+        <div class="infos-container">
+          <p id="telling-more">
+            Tell us a little more about your event or what you are looking for!
+          </p>
+          <textarea name="needs" id="needs"></textarea>
+
+          <form action="Wholesale.html">
+            <div class="W-form-block">
+              <label for="first-name" class="label-1">Name</label>
+              <div class="W-input-block-separator">
+                <div class="W-input-block">
+                  <input type="text" name="first-name" id="first-name" />
+                  <label for="first-name">First Name</label>
+                </div>
+                <div class="W-input-block">
+                  <input type="text" name="last-name" id="last-name" />
+                  <label for="last-name">Last Name</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="W-form-block">
+              <label for="email" class="label-1">Email</label>
+              <div class="W-input-block-separator">
+                <div class="W-input-block">
+                  <input type="email" name="email" id="email" />
+                  <label for="email">example@example.com</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="W-form-block">
+              <label for="phone-number" class="label-1">Phone Number</label>
+              <div class="W-input-block-separator">
+                <div class="W-input-block">
+                  <input type="text" name="phone-number" id="phone-number" />
+                  <label for="phone-number"
+                    >please enter a valid phone number</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="W-form-block">
+              <label for="event-date" class="label-1"
+                >Desired Date of Event or Pick Up</label
+              >
+
+              <div class="W-input-block date-block">
+                <input type="date" name="event-date" id="event-date" />
+                <label for="event">Date</label>
+              </div>
+            </div>
+            <input type="submit" id="submit" />
+          </form>
+        </div>
+      </div>
+      <div class="jotform-logo">
+                <img src="MainImages/jotform-logo-white.svg" alt="OOPS!">
+                <button>Create your own Jotform</button>
+      </div>
+    </main>
+    <!--footer-->
+        <footer class="main-footer">
+            <span><i class="fa-brands fa-facebook-f"></i></span>
+            <span><i class="fa-brands fa-instagram"></i></span>
+        </footer>
+    <script src="/Main.js"></script>
+  </body>
+</html>

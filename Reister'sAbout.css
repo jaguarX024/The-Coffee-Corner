@@ -1,0 +1,99 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*about us main*/
+#about-us{
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    background: url("MainImages/coffee_display.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+#aobut-us-text h1{
+    color: white;
+    font-weight: bold;
+    margin-top: 50%;
+    
+}
+.ourStory{
+    padding: 15% 10%;
+    background-color: rgb(25, 12, 12);
+    position: relative;
+   
+    
+}
+.ourStory img{
+    width: 100%;
+    margin-bottom: 10%;
+}
+.ourStory h1{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5%;
+
+}
+.story-description p{
+    color: white;
+    line-height:2;
+    text-align: center;
+    font-size: 18px;
+   
+}
+.question{
+    font-weight: bold;
+    margin-bottom: 5%;
+    font-size: 25px;
+}
+.description{
+    margin-bottom: 20%;
+}
+.main-images{
+    width: 100%;
+    display: grid;
+}
+
+
+/* when width reaches 500px*/
+@media only screen and (min-width:500px){
+
+    .ourStory{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        
+       }
+       
+}
+
+@media only screen and (min-width:980px){
+    .ourStory{
+        padding-left:25%;
+        padding-right: 25%;
+    }
+    .main-images-container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+    }
+    #about-us{
+        display: flex;
+        justify-content: center;
+        height: 50vh;
+    }
+   
+}
+
+
+/*js css*/
+

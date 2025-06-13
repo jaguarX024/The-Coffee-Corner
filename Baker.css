@@ -1,0 +1,270 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*main part*/
+
+
+main{
+    padding: 5% 10%;
+}
+
+.main-background{
+    background: url("MainImages/brown\ wall.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    
+}
+.main-content-container{
+    color: white;
+    padding: 10% 7% 0 ;
+}
+
+.baker-description{
+    color: white;
+}
+.baker-description h2{
+    margin-bottom: 20px;
+}
+.baker-description #P1{
+    margin-bottom: 20px;
+}
+.baker-description #P2{
+    margin-bottom: 20px;
+}
+.baker-description #P3{
+    margin-bottom: 20px;
+}
+.baker-description #P4{
+    margin-bottom: 20px;
+}
+
+
+.baker-requirements{
+    margin: 20px 0 40px 15px;
+}
+.baker-requirements li{
+    margin-bottom: 10px;
+}
+.baker-directions #BD-P1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.baker-directions{
+    margin-bottom: 40px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    padding: 20px 0;
+
+}
+
+/*form design*/
+form input, select, textarea{
+    background: rgb(81, 73, 73);
+    color: white;
+}
+
+
+.nameInfo-block{
+    display: grid;
+    grid-template-columns: 26% 74%;
+    margin-bottom: 40px;
+    font-size: 14px;
+    
+}
+.label-input{
+    display: grid;
+    font-size: 14px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    gap: 10px;
+    
+}
+.label-input input{
+    background: rgb(81, 73, 73);
+    color: white;
+
+}
+.input-block{
+    display: flex;
+    flex-direction: column;
+}
+.Fname-input{
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.mon-day-year{
+    display: grid;
+    font-size: 14px;
+    grid-template-columns: 26% 74%;
+    margin-bottom: 40px;
+    
+}
+.select-blocks{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+.select-blocks select{
+    height: 25px;
+    border-radius: 5px;
+    
+}
+.address-blocks{
+    display: grid;
+    font-size: 14px;
+    grid-template-columns: 25% 80%;
+    margin-bottom: 40px;
+}
+.address input{
+    height: 25px;
+    border-radius: 5px;
+}
+
+.address #street-address, #street-address2{
+    display: block;
+    width: 100%;
+}
+.A-block{
+    margin-bottom: 20px;
+}
+.A-block2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: px;
+    row-gap: 14px;
+}
+.A-block3{
+    display: flex;
+    flex-direction: column;
+}
+.email-block{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+.email-block2{
+    display: grid;
+
+}
+.email-block2 input{
+    height: 25px;
+    border-radius: 5px;
+}
+.contact-block{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+.phone-block{
+    display: grid;
+    row-gap: 14px;
+
+}
+.phone-block2{
+    display: grid;
+    
+}
+.phone-block input{
+    height: 25px;
+    border-radius: 5px;
+}
+.Mor-Weekend-avail-block{
+    display: grid;
+    grid-template-columns: 45% 55%;
+    margin-bottom: 40px;
+}
+#Mor-Weekend-avail {
+    height: 25px;
+    border-radius: 5px;
+}
+.RJE-block, .WH-block, .trans-block, .start-date-block, .file-block{
+    display: grid;
+    grid-template-columns: 45% 55%;
+    margin-bottom: 40px;
+}
+.RJE-block textarea{
+    border-radius: 5px;
+    height: 75px;
+}
+.WH-block input{
+    height: 25px;
+    border-radius: 5px;
+}
+.trans-block{
+    margin-top: 20px;
+}
+.trans-block input{
+    height: 25px;
+    border-radius: 5px;
+}
+
+.startDate{
+    display: grid;
+    font-size: 14px;
+}
+.startDate input{
+    height: 25px;
+    border-radius: 5px;
+}
+.cover-letter-block{
+    display: grid;
+    grid-template-columns: 45% 55%;
+   
+    
+}
+
+ .form-submit button{
+    background-color: orangered;
+    height: 40px;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 40px;
+    color: white;
+}
+.form-submit button:hover{
+    cursor: pointer;
+}
+.jotform-logo{
+    background-color: rgb(29, 29, 87);
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    column-gap: 20px;
+    height: 3%px;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0 3% 3%;
+    position: relative;
+
+}
+.jotform-logo img{
+  max-width: 150px;;
+}
+.jotform-logo button{
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(119, 173, 37);
+    position: absolute;
+    right: 10px;
+    color: white;
+    padding: 5px;
+    
+}
+#jotform_link{
+    text-decoration: none;
+    color: white;
+}
+#jotform_link:hover{
+    cursor: pointer;
+}
+
+

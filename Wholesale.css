@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.W-main{
+    padding: 10% 10% 10% 10%;
+   
+}
+h2{
+    margin-bottom: 10px;
+}
+.infos-container{
+    margin-top: 20px;
+    border-top: 1px solid gray;
+    padding-top: 10%;
+}
+textarea{
+    height: 20vh;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.W-input-block-separator{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+    margin-bottom: 10%;
+
+}
+.W-form-block{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.W-input-block{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.W-input-block label{
+    font-size: 12px;
+    color: gray;
+}
+input{
+    margin-bottom: 5px;
+    border: 1px solid gray;
+    height: 2em;
+    border-radius: 5px;
+}
+#event-date{
+    width: 45%;
+}
+.date-block{
+   padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+#submit{
+    width: 200px;
+    position: absolute;
+    left: 35%;
+    margin-top: 30px;
+    height: 50px;
+    background-color: rgb(4, 185, 112);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+}
+#submit:hover{
+    background-color: rgb(97, 168, 124);
+}
+
+
+.content-container{
+    padding-bottom: 30vh;
+    position: relative;
+    background-color: white;
+   
+}
+.jotform-logo{
+    background-color: rgb(29, 29, 87);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    column-gap: 20px;
+    height: 3%;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0 3% 3%;
+    position: relative;
+}
+.jotform-logo img{
+    max-width: 150px;
+  }
+  .jotform-logo button{
+    height: 40px;
+    border-radius: 5px;
+    background-color: rgb(119, 173, 37);
+    position: absolute;
+    right: 10px;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    
+}
+
+@media only screen and (min-width:980px){
+    .content-container{
+        padding: 5% 20% 30vh 20%;
+        position: relative;
+    }
+    .W-main{
+        padding-top: 0;
+    }
+    #submit{
+        left: 40%;
+    }
+
+}
+
+/*header styling*/
+.ham-menu{
+    z-index: 8;
+}
