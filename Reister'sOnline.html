@@ -17,11 +17,14 @@
       <div class="H1-H2">
         <div class="H-1">
           <div class="clover">
-            <div id="clover-image">
-              <img src="MainImages/clover.png" alt="OOPS!" />
-            </div>
+            <a href="Reister'sOnline.html">
+              <div id="clover-image">
+                <img src="MainImages/transparent_coffee.png" alt="OOPS!" />
+              </div>
 
-            <p>Clover</p>
+              <p>Clover</p>
+            </a>
+            
           </div>
           <div class="log-in">
             <div id="log-in-icon">
@@ -37,9 +40,9 @@
           </p>
           <div class="H-categories">
             <ul>
-              <li><a href="#optionCoffee">Coffee</a></li>
-              <li><a href="#optionTea">Tea</a></li>
-              <li><a href="#optionBeverages">Beverages, Other</a></li>
+              <li><a href="#link_to_coffee" >Coffee</a></li>
+              <li><a href="#link_to_tea">Tea</a></li>
+              <li><a href="#link_to_beverages">Beverages, Other</a></li>
               <li><a href="">Panini</a></li>
               <li><a href="">Smoothie</a></li>
               <li><a href="">Food</a></li>
@@ -50,9 +53,6 @@
         </div>
       </div>
 
-      <div class="cart-icon">
-        <i class="fa-solid fa-basket-shopping"></i>
-      </div>
       <div class="H-2-cart-bar-container shoppingCart">
         <div class="H-2-cart-bar">
           <div>
@@ -69,11 +69,11 @@
     </header>
     <main>
       <div class="online-infos">
-        <img id="clover-logo" src="MainImages/Clover-logo.jpeg" alt="OOPS!" />
+        <img id="clover-logo" src="MainImages/coffee_house.png" alt="OOPS!" />
         <div class="store-address">
-          <h2>THE REISTER'S DAUGHTER C</h2>
-          <p>202 MAIN STREET, REISTERSTOWN MD</p>
-          <p>(443) 416-2347</p>
+          <h2>THE COFFE CORNER</h2>
+          <p>BALTIMORE, MD</p>
+          <p>(443) 225-0610</p>
         </div>
 
         <div class="schedule-displayer">
@@ -86,14 +86,14 @@
           </div>
           <div class="Hor-clo-ang">
             <i class="fa-regular fa-clock"></i>
-            <p>closed<i class="fa-solid fa-angle-down schedule-slide-angle"></i></p>
+            <p>Hours<i class="fa-solid fa-angle-down schedule-slide-angle"></i></p>
           </div>
         </div>
       </div>
 
       <div class="order-options">
         <div class="cat-blocks" id="optionCoffee">
-          <p class="categorie-name" > <span class="coffee categorie-name2">COFFEE</span></p>
+          <p class="categorie-name"> <span class="coffee categorie-name2" id="link_to_coffee">COFFEE</span></p>
           <div class="items-grid">
             <div id="1" class="item">
               <p class="item-name">12oz Small Coffee</p>
@@ -114,7 +114,7 @@
           </div>
         </div>
         <div class="cat-blocks">
-          <p class="categorie-name" id="optionTea"><span class="tea categorie-name2">TEA</span></p>
+          <p class="categorie-name" id="optionTea"><span class="tea categorie-name2" id="link_to_tea">TEA</span></p>
           <div class="items-grid">
             <div id="5" class="item">
               <p class="item-name">London Fog</p>
@@ -135,7 +135,7 @@
           </div>
         </div>
         <div class="cat-blocks">
-          <p class="categorie-name" id="optionBeverages"> <span class="beverages-other categorie-name2">BEVERAGES, OTHER</span></p>
+          <p class="categorie-name" id="optionBeverages"> <span class="beverages-other categorie-name2" id="link_to_beverages">BEVERAGES, OTHER</span></p>
           <div class="items-grid">
             <div id="9" class="item">
               <p class="item-name">16oz Hot Chocolate</p>
@@ -201,13 +201,13 @@
     <div class="cat-slide">
       <p id="cat-slide-header">categories</p>
       <ul class="cat-list">
-        <li id="coffee">Coffee</li>
-        <li id="tea">Tea</li>
-        <li id="beverages-other">Beverages, Other</li>
-        <li>Panini &emsp; *Not Available*</li>
-        <li>Smoothie &emsp; *Not Available*</li>
-        <li>Grab & Go &emsp; *Not Available*</li>
-        <li>Bagels &emsp; *Not Available*</li>
+        <li id="coffee"><a href="#link_to_coffee" class="cat_slide_links">Coffee</a></li>
+        <li id="tea"><a href="#link_to_tea" class="cat_slide_links">Tea</a></li>
+        <li id="beverages-other"><a href="#link_to_beverages" class="cat_slide_links">Beverages, Other</a></li>
+        <li><a href="#">Panini &emsp; *Not Available*</a></li>
+        <li><a href="#">Smoothie &emsp; *Not Available*</a></li>
+        <li><a href="#">Grab & Go &emsp; *Not Available*</a></li>
+        <li><a href="#">Bagels &emsp; *Not Available*</a></li>
       </ul>
     </div>
     <!--Ordering hours slide-->

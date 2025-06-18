@@ -15,7 +15,7 @@ let add_order_plus= document.querySelector(".plus");
 let add_order_minus= document.querySelector(".minus");
 let item_quantity= document.querySelector(".add-quantity");
 let cat_list= document.querySelectorAll(".cat-list li");
-
+let cat_slide_links= document.querySelectorAll(".cat_slide_links");
 
 
 
@@ -33,11 +33,14 @@ let cat_arrow_event= function(){
             cat_slide.classList.toggle("cat-slide-js");
             cat_arrow.classList.toggle("cat-arrow-js");
             html.classList.toggle("html-js");
+            body.classList.toggle("body_no_scroll");
         }
         else{
             if(!cat_slide_event_active){
                 return;
             }
+            
+            cat_arrow.classList.toggle("cat-arrow-js");
             H_categories.classList.toggle("H-categories-js");
         }
        
@@ -50,8 +53,12 @@ body.addEventListener("click", event=>{
 
         if (!cat_slide.contains(event.target) && !cat_arrow.contains(event.target) && !schedule_angle_down.contains(event.target)&& !schedule_slide.contains(event.target)){
             cat_slide.classList.remove("cat-slide-js");
-            cat_arrow.classList.remove("cat-arrow-js");
+            if (document.body.clientWidth < 900){
+                cat_arrow.classList.remove("cat-arrow-js");
+            }
+                
             html.classList.remove("html-js");
+            body.classList.remove("body_no_scroll");
             ord_hours_event_active= true;
             
         }
@@ -74,6 +81,7 @@ exit.addEventListener("click", event=>{
         html.classList.remove("html-js");
         cat_slide_event_active=true;
         schedule_slide.classList.remove("ord_hours_slide2-js");
+        body.classList.remove("body_no_scroll");
        
     }
    
@@ -85,6 +93,7 @@ schedule_angle_down.addEventListener("click", ()=>{
     }
     cat_slide_event_active=false;
     H_categories.classList.remove("H-categories-js");
+    body.classList.add("body_no_scroll");
 
     if(window.innerWidth <=900)
         {
@@ -105,8 +114,17 @@ schedule_angle_down.addEventListener("click", ()=>{
    
    
 
-})
+});
 
+/*control cat slide links click event*/
+cat_slide_links.forEach(element=>{
+    element.addEventListener("click", ()=>{
+            cat_slide.classList.toggle("cat-slide-js");
+            cat_arrow.classList.toggle("cat-arrow-js");
+            html.classList.toggle("html-js");
+            body.classList.toggle("body_no_scroll");
+    });
+});
 
 let item;
 order_items.forEach(element => {
