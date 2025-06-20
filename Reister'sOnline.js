@@ -22,36 +22,47 @@ let cat_slide_links= document.querySelectorAll(".cat_slide_links");
 
 
 
-let cat_arrow_event= function(){
-    ord_hours_event_active= false;
-    
-    if (document.body.clientWidth <= 900)
-        {
-            if(!cat_slide_event_active){
-                return;
-            }
-            cat_slide.classList.toggle("cat-slide-js");
-            cat_arrow.classList.toggle("cat-arrow-js");
-            html.classList.toggle("html-js");
-            body.classList.toggle("body_no_scroll");
-        }
-        else{
-            if(!cat_slide_event_active){
-                return;
-            }
-            
-            cat_arrow.classList.toggle("cat-arrow-js");
-            H_categories.classList.toggle("H-categories-js");
-        }
-       
+let cat_arrow_event = function () {
 
-    
+    if (document.body.clientWidth <= 900) {
+        if (!cat_slide_event_active) {
+            return;
+        }
+        cat_slide.classList.toggle("cat-slide-js");
+        cat_arrow.classList.toggle("cat-arrow-js");
+        html.classList.toggle("html-js");
+        body.classList.toggle("body_no_scroll");
+
+        
+    } else {
+        if (!cat_slide_event_active) {
+            return;
+        }
+
+        cat_arrow.classList.toggle("cat-arrow-js");
+        H_categories.classList.toggle("H-categories-js");
+
+    }
 };
+
 cat_arrow.addEventListener("click",cat_arrow_event );
 
 body.addEventListener("click", event=>{
 
-        if (!cat_slide.contains(event.target) && !cat_arrow.contains(event.target) && !schedule_angle_down.contains(event.target)&& !schedule_slide.contains(event.target)){
+    //categories arrow event reaction to body click
+       if(!cat_arrow.contains(event.target)){
+            cat_arrow.classList.remove("cat-arrow-js");
+            H_categories.classList.remove("H-categories-js");
+
+        }
+            
+   
+
+
+    if (!cat_slide.contains(event.target) && !cat_arrow.contains(event.target) &&
+         !schedule_angle_down.contains(event.target)&&
+          !schedule_slide.contains(event.target) && !cart_bar_lg.contains(event.target) &&
+            !cart_page.contains(event.target)){
             cat_slide.classList.remove("cat-slide-js");
             if (document.body.clientWidth < 900){
                 cat_arrow.classList.remove("cat-arrow-js");
@@ -59,19 +70,43 @@ body.addEventListener("click", event=>{
                 
             html.classList.remove("html-js");
             body.classList.remove("body_no_scroll");
-            ord_hours_event_active= true;
+
             
-        }
+
+            
+    }
+
+    //hide the cart page when clicking outside of it
+    if (!cart_page.contains(event.target) && cart_page.classList.contains("cart-page-lg") && !cart_bar_lg.contains(event.target)) {
+        body.classList.remove("html-js");
+        cart_page.classList.remove("cart-page-lg");
+        
+        //code added to to make other events active after closing the cart page by clicking outside of it
+        O_C_event_active = true;
+        cat_slide_event_active = true;   
+        ord_hours_event_active = true;
+    }
     
-    if(!schedule_slide.contains(event.target)&& !schedule_angle_down.contains(event.target) && !cat_arrow.contains(event.target)&&!cat_slide.contains(event.target)){
+    if (
+    !schedule_slide.contains(event.target) &&
+    !schedule_angle_down.contains(event.target) &&
+    !cat_arrow.contains(event.target) &&
+    !cat_slide.contains(event.target)
+) {
+    if (
+        schedule_slide.classList.contains("schedule-slide-display") ||
+        schedule_slide.classList.contains("ord_hours_slide2-js")
+    ) {
         schedule_slide.classList.remove("schedule-slide-display");
+        schedule_slide.classList.remove("ord_hours_slide2-js");
         schedule_angle_down.classList.remove("cat-arrow-js");
         html.classList.remove("html-js");
-        cat_slide_event_active=true;
-        schedule_slide.classList.remove("ord_hours_slide2-js");
-
-        
+        cat_slide_event_active = true;   
+        ord_hours_event_active = true;  
+        basket_icon_event_active= true;
+        O_C_event_active= true;
     }
+}
 });
 
 exit.addEventListener("click", event=>{
@@ -80,18 +115,25 @@ exit.addEventListener("click", event=>{
         schedule_angle_down.classList.remove("cat-arrow-js");
         html.classList.remove("html-js");
         cat_slide_event_active=true;
+        ord_hours_event_active = true; 
+        basket_icon_event_active=true;
+        O_C_event_active= true;
         schedule_slide.classList.remove("ord_hours_slide2-js");
         body.classList.remove("body_no_scroll");
-       
     }
-   
-})
+});
+
 
 schedule_angle_down.addEventListener("click", ()=>{
     if (!ord_hours_event_active){
         return ;
     }
+
+    //stop all other events from happening
     cat_slide_event_active=false;
+    O_C_event_active=false;
+    basket_icon_event_active=false;
+
     H_categories.classList.remove("H-categories-js");
     body.classList.add("body_no_scroll");
 
@@ -133,8 +175,18 @@ order_items.forEach(element => {
         if(!O_C_event_active){
             return;
         }
+
+        //closing cart page
+        if( cart_page.classList.contains("cart-page-lg")){
+            cart_page.classList.toggle("cart-page-lg");
+        }
+
+        //disabling other events when order items are clicked
+        basket_icon_event_active= false;
         cat_slide_event_active=false;
         ord_hours_event_active= false;
+
+
         window.scrollTo({ top: 0 });
         item= Number(event.target.id);
         let block_to_be_displayed;
@@ -143,7 +195,7 @@ order_items.forEach(element => {
         body.classList.add("no-scroll");
         switch(item)
         {
-           case 0:
+           case 1:
            
            block_to_be_displayed= document.querySelector(".coffeeLike-Char");
            if (block_to_be_displayed){
@@ -154,7 +206,7 @@ order_items.forEach(element => {
            }
            break;
             
-            case 1:
+            case 2:
                  block_to_be_displayed= document.querySelector(".coffeeLike-Char");
                  if (block_to_be_displayed){
                     block_name= block_to_be_displayed.querySelector(".block-name-js");
@@ -164,7 +216,7 @@ order_items.forEach(element => {
                  }
                  break;
                  
-                 case 2:
+                 case 3:
                     block_to_be_displayed= document.querySelector(".coffeeLike-Char");
                     if (block_to_be_displayed){
                        block_name= block_to_be_displayed.querySelector(".block-name-js");
@@ -173,7 +225,7 @@ order_items.forEach(element => {
                        
                     }
                     break;
-                    case 3:
+                    case 4:
                         block_to_be_displayed= document.querySelector(".coffeeLike-Char");
                         if (block_to_be_displayed){
                            block_name= block_to_be_displayed.querySelector(".block-name-js");
@@ -182,16 +234,7 @@ order_items.forEach(element => {
                            
                         }
                         break;
-                        case 4:
-                            block_to_be_displayed= document.querySelector(".coffeeLike-Char");
-                            if (block_to_be_displayed){
-                               block_name= block_to_be_displayed.querySelector(".block-name-js");
-                               block_name.innerHTML= `${item_name.innerHTML}`;
-                               block_to_be_displayed.classList.add("block-display-js");
-                               
-                            }
-                            break;
-                            case 5:
+                        case 5:
                             block_to_be_displayed= document.querySelector(".coffeeLike-Char");
                             if (block_to_be_displayed){
                                block_name= block_to_be_displayed.querySelector(".block-name-js");
@@ -254,6 +297,15 @@ order_items.forEach(element => {
                                
                             }
                             break;
+                            case 12:
+                            block_to_be_displayed= document.querySelector(".coffeeLike-Char");
+                            if (block_to_be_displayed){
+                               block_name= block_to_be_displayed.querySelector(".block-name-js");
+                               block_name.innerHTML= `${item_name.innerHTML}`;
+                               block_to_be_displayed.classList.add("block-display-js");
+                               
+                            }
+                            break;
 
             
                 
@@ -265,13 +317,17 @@ order_items.forEach(element => {
     })
 });
 
-O_C_exit.addEventListener("click", event=>{
-    let to_be_closed= event.target.closest(".Add-ons");
-    to_be_closed.classList.remove("block-display-js");
-    O_C_event_active= true;
-    body.classList.remove("no-scroll");
 
+O_C_exit.addEventListener("click", event=>{
+    let to_be_closed = event.target.closest(".Add-ons");
+    to_be_closed.classList.remove("block-display-js");
+    O_C_event_active = true;
+    cat_slide_event_active = true;   
+    ord_hours_event_active = true;  
+    basket_icon_event_active= true; 
+    body.classList.remove("no-scroll");
 });
+
 
 add_order_plus.addEventListener("click",()=>{
     let quantity= Number(item_quantity.innerHTML);
@@ -401,18 +457,34 @@ function addItemToHtml(){
 }
 
 let cart_page= document.querySelector(".cart-page");
-let cart_bar_lg= document.querySelector(".shoppingCart");
+let cart_bar_lg= document.querySelector(".basket_click");
 let cart_bar=document.querySelector(".cart-bar");
+basket_icon_event_active= true;
 
 cart_bar.addEventListener("click",()=>{
-       
+       cart_page.classList.add("cart-page-sm");            
+});
 
-            cart_page.classList.add("cart-page-sm");
-        
-
-        
-})
 cart_bar_lg.addEventListener("click", ()=>{
-    cart_page.classList.add("cart-page-lg");
-})
-        
+    if(!basket_icon_event_active){
+        return;
+    }
+    cart_page.classList.toggle("cart-page-lg");
+    //Diabling other events when cart page is displayed
+    O_C_event_active = false;
+    cat_slide_event_active = false;   
+    ord_hours_event_active = false;  
+    
+    //stopping the page from scrolling when cart page is displayed
+    document.body.classList.toggle("body_no_scroll");
+
+    //turning the body dark when cart page is displayed
+    body.classList.toggle("html-js");
+
+    //reactivate other page events when the cart page is closed using the basket icon
+    if (!cart_page.classList.contains("cart-page-lg")) {
+        O_C_event_active = true;
+        cat_slide_event_active = true;   
+        ord_hours_event_active = true;   
+    }
+});
