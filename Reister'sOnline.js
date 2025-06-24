@@ -186,11 +186,14 @@ order_items.forEach(element => {
         cat_slide_event_active=false;
         ord_hours_event_active= false;
 
-
         window.scrollTo({ top: 0 });
-        item= Number(event.target.id);
+
+        // FIX: always get the .item div, even if a child is clicked
+        const itemDiv = event.target.closest('.item');
+        if (!itemDiv) return;
+        item = Number(itemDiv.id);
         let block_to_be_displayed;
-        let item_name = event.target.querySelector(".item-name");
+        let item_name = itemDiv.querySelector(".item-name");
         let block_name;
         body.classList.add("no-scroll");
         switch(item)
