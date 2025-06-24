@@ -386,78 +386,23 @@ elements.forEach(element => {
 
 
 /* Adding to cart handling codes*/
-let listProducts=[];
-let cart=[];
 let add_to_cart= document.querySelector(".order-button");
 let cart_page_elements= document.querySelector(".cart-page-elements");
-let cartPrice = 0;
-let cart_bar_item_count=0;
 let cart_price_html= document.querySelector(".cart-bar-price");
 let cart_quantity_html= document.querySelector(".cart-bar-items-count");
 
 
 
-const initApp = function(){
-    fetch("Reister'sOnline.json")
-    .then(response=>response.json())
-    .then(data=>{
-        listProducts=data;
-    });
-}
-initApp();
 
-add_to_cart.addEventListener("click",event=>{
-    /*let index=  listProducts.findIndex(n=>n.id == item);*/
-    item= item-1;
-    if (listProducts.length === 0) {
-        console.log("Products are not loaded yet.");
-        return;
-    }
 
-    let price= Number(listProducts[item].price);
-    cartPrice += price;
-    cart_price_html.innerHTML= `${cartPrice}`;
-    cart_bar_item_count++;
-    cart_quantity_html.innerHTML= `${cart_bar_item_count}`;
-      
-    addToCart(item);
-});
 
-function addToCart(elementID){
 
-    let cartIndex =cart.findIndex(n=>n.id === listProducts[elementID].id);
-    if(cartIndex>=0){
-        cart[cartIndex].quantity +=1;
-    }
-    else{
-        cart.push({
-            id: listProducts[elementID].id,
-            quantity:1
-        });
-    }
-    addItemToHtml();
-}
 
-function addItemToHtml(){
-    cart_page_elements.innerHTML="";
-    cart.forEach(element=>{
-        let newElement= document.createElement("div");
-        newElement.classList.add("cart_item_row");
-        newElement.innerHTML=`
-        <div>
-            <p>${listProducts.find(product=>product.id === element.id).name}</p>
-        </div>
-        <div class="C_price_delete">
-            <p> $${listProducts.find(product=>product.id === element.id).price}</p>
-            <i class="fa-solid fa-trash"></i>
-             
-        </div>
-        
-        `
-        cart_page.appendChild(newElement);
-    })
 
-}
+
+
+
+
 
 let cart_page= document.querySelector(".cart-page");
 let cart_bar_lg= document.querySelector(".basket_click");

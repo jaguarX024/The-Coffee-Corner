@@ -346,6 +346,9 @@ footer{
     color: white;
     font-size: 20px;
 }
+.order-button:hover{
+    background-color:rgb(22, 76, 79) ;
+}
 .quantity{
     display: flex;
     align-items: center;
@@ -725,7 +728,7 @@ header{
 }
 
 .schedule-slide-display{
-    height: 360px;
+    height: 50vh;
 
 }
 
