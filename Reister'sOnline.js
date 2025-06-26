@@ -11,13 +11,14 @@ let ord_hours_event_active= true;
 let order_items= document.querySelectorAll(".item");
 let O_C_exit= document.querySelector(".O-C-exit");
 let O_C_event_active= true;
+let cat_list= document.querySelectorAll(".cat-list li");
+let cat_slide_links= document.querySelectorAll(".cat_slide_links");
+let initial_price= document.querySelector(".initial-price");
 let add_order_plus= document.querySelector(".plus");
 let add_order_minus= document.querySelector(".minus");
 let item_quantity= document.querySelector(".add-quantity");
-let cat_list= document.querySelectorAll(".cat-list li");
-let cat_slide_links= document.querySelectorAll(".cat_slide_links");
-
-
+//variable to keep track of by how much the price will increase after clicking "+" or "-"
+let plus_minus_tracker;
 
 
 
@@ -55,8 +56,7 @@ body.addEventListener("click", event=>{
             H_categories.classList.remove("H-categories-js");
 
         }
-            
-   
+        
 
 
     if (!cat_slide.contains(event.target) && !cat_arrow.contains(event.target) &&
@@ -77,7 +77,7 @@ body.addEventListener("click", event=>{
     }
 
     //hide the cart page when clicking outside of it
-    if (!cart_page.contains(event.target) && cart_page.classList.contains("cart-page-lg") && !cart_bar_lg.contains(event.target)) {
+    if (!cart_page.contains(event.target) && cart_page.classList.contains("cart-page-lg") && !cart_bar_lg.contains(event.target) && !event.target.closest(".in-cart-delete")) {
         body.classList.remove("html-js");
         cart_page.classList.remove("cart-page-lg");
         
@@ -107,6 +107,7 @@ body.addEventListener("click", event=>{
         O_C_event_active= true;
     }
 }
+
 });
 
 exit.addEventListener("click", event=>{
@@ -169,6 +170,7 @@ cat_slide_links.forEach(element=>{
 });
 
 let item;
+let initial_price_var;
 order_items.forEach(element => {
 
     element.addEventListener("click", event=>{
@@ -205,6 +207,9 @@ order_items.forEach(element => {
               block_name= block_to_be_displayed.querySelector(".block-name-js");
               block_name.innerHTML= `${item_name.innerHTML}`;
               block_to_be_displayed.classList.add("block-display-js");
+              initial_price_var= 2.85;
+              plus_minus_tracker=2.85;
+              initial_price.innerHTML=initial_price_var.toFixed(2);
               
            }
            break;
@@ -215,7 +220,9 @@ order_items.forEach(element => {
                     block_name= block_to_be_displayed.querySelector(".block-name-js");
                     block_name.innerHTML= `${item_name.innerHTML}`;
                     block_to_be_displayed.classList.add("block-display-js");
-                    
+                    initial_price_var= 3.15;
+                    plus_minus_tracker=3.15;
+                    initial_price.innerHTML=initial_price_var.toFixed(2);
                  }
                  break;
                  
@@ -225,6 +232,9 @@ order_items.forEach(element => {
                        block_name= block_to_be_displayed.querySelector(".block-name-js");
                        block_name.innerHTML= `${item_name.innerHTML}`;
                        block_to_be_displayed.classList.add("block-display-js");
+                       initial_price_var= 4.50;
+                       plus_minus_tracker=4.50;
+                       initial_price.innerHTML=initial_price_var.toFixed(2);
                        
                     }
                     break;
@@ -234,6 +244,9 @@ order_items.forEach(element => {
                            block_name= block_to_be_displayed.querySelector(".block-name-js");
                            block_name.innerHTML= `${item_name.innerHTML}`;
                            block_to_be_displayed.classList.add("block-display-js");
+                           initial_price_var= 4.99;
+                           plus_minus_tracker=4.99;
+                           initial_price.innerHTML=initial_price_var.toFixed(2);
                            
                         }
                         break;
@@ -243,7 +256,9 @@ order_items.forEach(element => {
                                block_name= block_to_be_displayed.querySelector(".block-name-js");
                                block_name.innerHTML= `${item_name.innerHTML}`;
                                block_to_be_displayed.classList.add("block-display-js");
-                               
+                               initial_price_var= 4.30;
+                               plus_minus_tracker=4.30;
+                               initial_price.innerHTML=initial_price_var.toFixed(2);
                             }
                             break;
                             case 6:
@@ -252,7 +267,9 @@ order_items.forEach(element => {
                                block_name= block_to_be_displayed.querySelector(".block-name-js");
                                block_name.innerHTML= `${item_name.innerHTML}`;
                                block_to_be_displayed.classList.add("block-display-js");
-                               
+                               initial_price_var= 4.25;
+                               plus_minus_tracker=4.25;
+                               initial_price.innerHTML=initial_price_var.toFixed(2);
                             }
                             break;
                             case 7:
@@ -261,7 +278,9 @@ order_items.forEach(element => {
                                block_name= block_to_be_displayed.querySelector(".block-name-js");
                                block_name.innerHTML= `${item_name.innerHTML}`;
                                block_to_be_displayed.classList.add("block-display-js");
-                               
+                               initial_price_var= 3.50;
+                               plus_minus_tracker=3.50;
+                               initial_price.innerHTML=initial_price_var.toFixed(2);
                             }
                             break;
                             case 8:
@@ -270,7 +289,9 @@ order_items.forEach(element => {
                                block_name= block_to_be_displayed.querySelector(".block-name-js");
                                block_name.innerHTML= `${item_name.innerHTML}`;
                                block_to_be_displayed.classList.add("block-display-js");
-                               
+                               initial_price_var= 3.70;
+                               plus_minus_tracker=4.70;
+                               initial_price.innerHTML=initial_price_var.toFixed(2);
                             }
                             break;
                             case 9:
@@ -279,7 +300,9 @@ order_items.forEach(element => {
                                block_name= block_to_be_displayed.querySelector(".block-name-js");
                                block_name.innerHTML= `${item_name.innerHTML}`;
                                block_to_be_displayed.classList.add("block-display-js");
-                               
+                               initial_price_var= 4.20;
+                               plus_minus_tracker=4.20;
+                               initial_price.innerHTML=initial_price_var.toFixed(2);
                             }
                             break;
                             case 10:
@@ -288,7 +311,9 @@ order_items.forEach(element => {
                                block_name= block_to_be_displayed.querySelector(".block-name-js");
                                block_name.innerHTML= `${item_name.innerHTML}`;
                                block_to_be_displayed.classList.add("block-display-js");
-                               
+                               initial_price_var= 2.00;
+                               plus_minus_tracker=2.00;
+                               initial_price.innerHTML= initial_price_var.toFixed(2);
                             }
                             break;
                             case 11:
@@ -297,7 +322,9 @@ order_items.forEach(element => {
                                block_name= block_to_be_displayed.querySelector(".block-name-js");
                                block_name.innerHTML= `${item_name.innerHTML}`;
                                block_to_be_displayed.classList.add("block-display-js");
-                               
+                               initial_price_var= 3.80;
+                               plus_minus_tracker=3.80;
+                               initial_price.innerHTML= initial_price_var.toFixed(2);
                             }
                             break;
                             case 12:
@@ -306,7 +333,9 @@ order_items.forEach(element => {
                                block_name= block_to_be_displayed.querySelector(".block-name-js");
                                block_name.innerHTML= `${item_name.innerHTML}`;
                                block_to_be_displayed.classList.add("block-display-js");
-                               
+                               initial_price_var= 2.50;
+                               plus_minus_tracker=2.50;
+                               initial_price.innerHTML=initial_price_var.toFixed(2);
                             }
                             break;
 
@@ -329,6 +358,15 @@ O_C_exit.addEventListener("click", event=>{
     ord_hours_event_active = true;  
     basket_icon_event_active= true; 
     body.classList.remove("no-scroll");
+
+    //update the popup block items qunatity
+    item_quantity.innerHTML = "1";
+    //uncheck all checkboxes when closing the add-ons block
+    let add_ons_container= event.target.closest(".Add-ons");
+    let checkboxes= add_ons_container.querySelectorAll(".topping-checkbox");
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+    });
 });
 
 
@@ -336,6 +374,9 @@ add_order_plus.addEventListener("click",()=>{
     let quantity= Number(item_quantity.innerHTML);
     quantity +=1;
     item_quantity.innerHTML=`${quantity}`;
+    //update the add to order button price
+    let current_price= Number(initial_price.innerHTML);
+    initial_price.innerHTML=(current_price + plus_minus_tracker).toFixed(2);
 });
 add_order_minus.addEventListener("click",()=>{
     
@@ -343,8 +384,9 @@ add_order_minus.addEventListener("click",()=>{
     if(quantity>1){
         quantity -=1;
         item_quantity.innerHTML=`${quantity}`;
-
-
+        //update the add to order button price
+        let current_price= Number(initial_price.innerHTML);
+        initial_price.innerHTML=(current_price - plus_minus_tracker).toFixed(2);
     }
     
 });
@@ -357,57 +399,20 @@ function cat_list_event_closure(){
    }
 
 
-
-/*function handleIntersection(entries, observer) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            let categories_text = document.querySelector(".categories-text");
-            categories_text.innerHTML = entry.target.innerHTML;
-        }
-    });
-}
-
-
-let observer = new IntersectionObserver(handleIntersection, {
-    root: null,
-    rootMargin: '0px',
-    threshold: 1.0 
-});
-
-
-let elements = document.querySelectorAll(".categorie-name2");
-elements.forEach(element => {
-    observer.observe(element);
-});
-
-
-*/
-
-
-
 /* Adding to cart handling codes*/
 let add_to_cart= document.querySelector(".order-button");
 let cart_page_elements= document.querySelector(".cart-page-elements");
 let cart_price_html= document.querySelector(".cart-bar-price");
 let cart_quantity_html= document.querySelector(".cart-bar-items-count");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let topping_checkbox= document.querySelectorAll(".topping-checkbox");
 let cart_page= document.querySelector(".cart-page");
 let cart_bar_lg= document.querySelector(".basket_click");
 let cart_bar=document.querySelector(".cart-bar");
 basket_icon_event_active= true;
+let cart_items_count_lg= document.querySelector(".cart-bar-items-count");
+let cart_page_elements_container= document.querySelector(".cart-page-elements");
+let item_name_container= document.querySelector(".block-name-js");
+
 
 cart_bar.addEventListener("click",()=>{
        cart_page.classList.add("cart-page-sm");            
@@ -434,5 +439,150 @@ cart_bar_lg.addEventListener("click", ()=>{
         O_C_event_active = true;
         cat_slide_event_active = true;   
         ord_hours_event_active = true;   
+    }
+});
+
+
+//event handler for checkboxes when choosing a drink
+topping_checkbox.forEach(element=>{
+    element.addEventListener("change", (event)=>{
+         let current_price= Number(initial_price.innerHTML);
+         const li= event.target.closest("li");
+         const extraPriceSpan= li.querySelector(".extra-price");
+         let extra_price= Number(extraPriceSpan.innerHTML);
+         //determining by how much the extra price will increase based on item quantity
+         let factor= Number(item_quantity.innerHTML);
+        if(event.target.checked){
+            initial_price.innerHTML=(current_price + factor*extra_price).toFixed(2);
+            plus_minus_tracker += extra_price;
+        }
+        else{
+            initial_price.innerHTML=(current_price - factor*extra_price).toFixed(2);
+            plus_minus_tracker -= extra_price;
+        }
+    });
+});
+
+//Add to order button event
+//Manage the event for big screen and small screens separately
+add_to_cart.addEventListener("click", (event) => {
+    if (document.body.clientWidth > 900) {
+        // Update cart price
+        let amount_to_add = Number(initial_price.innerHTML);
+        let current_cart_value = Number(cart_price_html.innerHTML);
+        let updated_cart_value = (current_cart_value + amount_to_add).toFixed(2);
+        cart_price_html.innerHTML = updated_cart_value;
+
+        // Update cart items count
+        let current_cart_quantity = Number(cart_items_count_lg.innerHTML);
+        let quantity_to_add = Number(item_quantity.innerHTML);
+        let updated_cart_quantity = current_cart_quantity + quantity_to_add;
+        cart_items_count_lg.innerHTML = updated_cart_quantity;
+
+        // Create cart item block
+        let item_in_cart_block = document.createElement("div");
+
+        let first_block = document.createElement("div");
+        let second_block = document.createElement("div");
+
+        let item_in_cart_name = document.createElement("div");
+        let item_in_cart_price = document.createElement("div");
+        let in_cart_plus_minus = document.createElement("div");
+        let in_cart_delete = document.createElement("div");
+        // Name and quantity
+        let name_part1 = document.createElement("span");
+        let name_part2 = document.createElement("span");
+        name_part1.innerHTML = item_name_container.innerHTML;
+        name_part2.innerHTML = ` x ${item_quantity.innerHTML}`;
+        item_in_cart_name.appendChild(name_part1);
+        item_in_cart_name.appendChild(name_part2);
+
+        item_in_cart_price.innerHTML = `$${initial_price.innerHTML}`;
+
+        // Plus and minus icons
+        let plus_icon = document.createElement("div");
+        let minus_icon = document.createElement("div");
+        plus_icon.innerHTML = `<i class="fa-solid fa-plus"></i>`;
+        minus_icon.innerHTML = `<i class="fa-solid fa-minus"></i>`;
+        in_cart_plus_minus.appendChild(plus_icon);
+        in_cart_plus_minus.appendChild(minus_icon);
+
+        // Delete icon
+        in_cart_delete.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
+
+        // Assemble blocks
+        first_block.appendChild(item_in_cart_name);
+        first_block.appendChild(item_in_cart_price);
+        second_block.appendChild(in_cart_plus_minus);
+
+        item_in_cart_block.appendChild(first_block);
+        item_in_cart_block.appendChild(second_block);
+        // Add to cart page elements container
+        cart_page_elements_container.appendChild(item_in_cart_block);
+
+        //add classes to the blocks
+        item_in_cart_block.classList.add("item-in-cart-block");
+        first_block.classList.add("first-block");
+        second_block.classList.add("second-block"); 
+        item_in_cart_name.classList.add("item-in-cart-name");
+        item_in_cart_price.classList.add("item-in-cart-price");
+        in_cart_plus_minus.classList.add("in-cart-plus-minus");
+        in_cart_delete.classList.add("in-cart-delete");
+
+        //code for adding the selected toppings to the cart
+        let selected_toppings = [];
+        let checkboxes = event.target.closest(".Add-ons").querySelectorAll(".topping-checkbox");
+        checkboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                selected_toppings.push(checkbox.nextElementSibling.innerHTML);
+            }
+        });
+
+        //crating a toppings block
+        let toppings_block = document.createElement("div");
+        toppings_block.classList.add("toppings-block");
+        if (selected_toppings.length > 0) {
+            toppings_block.innerHTML = `${selected_toppings.join(", ")}`;
+        }
+        // Append toppings block to the second block
+        second_block.appendChild(toppings_block);
+        second_block.appendChild(in_cart_delete);
+
+        // Close the popup block after adding to cart
+        if (O_C_exit) O_C_exit.click();
+    }
+});
+
+
+//creating an event for a click on the delete icon in the cart page
+cart_page_elements_container.addEventListener("click", (event) => {
+    if (event.target.closest(".in-cart-delete")) {
+        let item_block = event.target.closest(".item-in-cart-block");
+        if (item_block) {
+            // Get the price and quantity from the item block
+            let item_price = Number(item_block.querySelector(".item-in-cart-price").innerHTML.replace('$', ''));
+            let item_quantity = Number(item_block.querySelector(".item-in-cart-name span:last-child").innerHTML.replace(' x ', ''));
+
+            // Update cart price and quantity
+            let current_cart_value = Number(cart_price_html.innerHTML);
+            cart_price_html.innerHTML = (current_cart_value - item_price).toFixed(2);
+
+            let current_cart_quantity = Number(cart_items_count_lg.innerHTML);
+            cart_items_count_lg.innerHTML = current_cart_quantity - item_quantity;
+
+            // Remove the item block from the cart page elements
+            item_block.remove();
+
+            //code to close the cart page if the cart is empty
+            // Optionally, check if cart is empty before closing
+            if (!cart_page_elements_container.querySelector(".item-in-cart-block") ) {
+                body.classList.remove("html-js");
+                cart_page.classList.remove("cart-page-lg");
+                O_C_event_active = true;
+                cat_slide_event_active = true;   
+                ord_hours_event_active = true;
+            }
+
+        }
     }
 });

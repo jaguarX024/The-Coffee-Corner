@@ -261,36 +261,59 @@
           <ul>
             <li>
               <div class="checkbox-group">
-                <input type="checkbox" id="extra-hot" />
+                <input class="topping-checkbox" type="checkbox" id="extra-hot" />
                 <p class="topping-name">Extra Shot (Note: All Shots Are Double Shots)</p>
               </div>
 
-              <p class="extra">+$1.50</p>
+              <p class="extra">+$ <span class="extra-price">1.50</span></p>
             </li>
             <li>
-              <input type="checkbox" />
-              <p class="topping-name">Add Half & Half (for drip coffee or tea)</p>
+              <div class="checkbox-group">
+                <input class="topping-checkbox" type="checkbox" id="half&half" />
+                <p class="topping-name">Add Half & Half (for drip coffee or tea)</p>
+              </div>
+
+              <p class="extra extra-hidden">+$ <span class="extra-price">0</span> </p>
             </li>
             <li>
-              <input type="checkbox" />
-              <p>Add Milk (for drip coffee or tea)</p>
+              <div class="checkbox-group">
+                <input class="topping-checkbox" type="checkbox" id="add-milk" />
+                <p class="topping-name">Add Milk (for drip coffee or tea)</p>
+              </div>
+
+              <p class="extra extra-hidden">+$ <span class="extra-price">0</span></p>
             </li>
             <li>
-              <input type="checkbox" />
-              <p>Add Oat Milk</p>
+              <div class="checkbox-group">
+                <input class="topping-checkbox" type="checkbox" id="add-oat-milk" />
+                <p class="topping-name">Add Oat Milk</p>
+              </div>
+
+              <p class="extra extra-hidden">+$ <span class="extra-price">0</span></p>
             </li>
             <li>
-              <input type="checkbox" />
-              <p>Add Coconut Milk</p>
+              <div class="checkbox-group">
+                <input class="topping-checkbox" type="checkbox" id="add-coco-milk" />
+                <p class="topping-name">Add Coconut Milk</p>
+              </div>
+
+              <p class="extra extra-hidden">+$ <span class="extra-price">0</span></p>
             </li>
             <li>
-              <input type="checkbox" id="sweet-cream" />
-              <p>Add Sweet Cream</p>
-              <p class="extra">+$0.20</p>
+              <div class="checkbox-group">
+                <input class="topping-checkbox" type="checkbox" id="add-s-cream" />
+                <p class="topping-name">Add Sweet Cream</p>
+              </div>
+
+              <p class="extra">+$ <span class="extra-price">0.20</span></p>
             </li>
             <li>
-              <input type="checkbox" />
-              <p>Cream & Sugar</p>
+              <div class="checkbox-group">
+                <input class="topping-checkbox" type="checkbox" id="add-c-sugar" />
+                <p class="topping-name">Cream & Sugar</p>
+              </div>
+
+              <p class="extra extra-hidden">+$ <span class="extra-price">0</span></p>
             </li>
           </ul>
         </div>
@@ -299,16 +322,28 @@
           <p class="c-b-header2">ROAST</p>
           <ul>
             <li>
-              <input type="checkbox" />
-              <p>Medium</p>
+              <div class="checkbox-group">
+                <input class="topping-checkbox" type="checkbox" id="medium" />
+                <p class="topping-name">Medium</p>
+              </div>
+
+              <p class="extra extra-hidden">+$ <span class="extra-price">0</span></p>
             </li>
             <li>
-              <input type="checkbox" />
-              <p>Dark</p>
+              <div class="checkbox-group">
+                <input class="topping-checkbox" type="checkbox" id="dark" />
+                <p class="topping-name">Dark</p>
+              </div>
+
+              <p class="extra extra-hidden">+$ <span class="extra-price">0</span></p>
             </li>
             <li>
-              <input type="checkbox" />
-              <p>Decaf</p>
+              <div class="checkbox-group">
+                <input class="topping-checkbox" type="checkbox" id="decaf" />
+                <p class="topping-name">Decaf</p>
+              </div>
+
+              <p class="extra extra-hidden">+$ <span class="extra-price">0</span></p>
             </li>
           </ul>
         </div>
@@ -323,7 +358,7 @@
         </div>
         <div class="order-button">
           <p>Add to order</p>
-          <p>$2.85</p>
+          <p>$<span class="initial-price">2.85</span></p>
         </div>
       </div>
     </div>

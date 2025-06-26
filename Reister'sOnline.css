@@ -305,11 +305,14 @@ footer{
 }
 .char-block li{
     display: flex;
-    gap: 15px;
+    gap: 10px;
     font-size: 18px;
     margin-bottom: 10px;
     border-bottom: 1px solid gray;
     padding: 18px 0;
+}
+.char-block .extra-hidden{
+    display: none;
 }
 .checkbox-group{
     display: flex;
@@ -504,6 +507,9 @@ input:hover{
     align-items: center;
     justify-content: space-between;
     
+}
+.cart-page-footer:hover{
+    background-color: rgb(22, 76, 79);
 }
 .cart-page-elements{
     margin-top: 10vh;
@@ -774,4 +780,38 @@ header{
 
 .body_no_scroll{
     overflow: hidden;
+}
+
+/*cart page elements css*/
+.item-in-cart-block{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid rgb(190, 186, 186);
+    padding: 20px;
+}
+
+.first-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.second-block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.in-cart-plus-minus{
+    display: none;
+}
+
+.in-cart-delete:hover{
+    padding: 2px;
+    border-radius: 100%;
+    background-color: rgb(175, 172, 172);
+}
+
+.toppings-block{
+    width: 80%;
 }
