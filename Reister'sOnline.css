@@ -210,7 +210,7 @@ footer{
     border-bottom: none;
 }
 .Ord-hours-slide{
-    padding: 20px 20px 0 20px ;
+    padding: 0 20px 0 20px ;
     position: fixed;
     bottom: 0;
     width:100%;
@@ -275,7 +275,6 @@ footer{
 .Add-ons{
     width: 400px;
     border-radius: 10px;
-    height: 70vh;
     overflow: hidden;
     position: absolute;
     top: 23%;
@@ -421,24 +420,7 @@ input:hover{
 
 
 
-/*cart*/
- .cart-bar{
-    position: fixed;
-    z-index: 16;
-    bottom: 0;
-    background-color: rgb(17, 88, 92);
-    width: 100%;
-    display: flex;
-    padding: 15px;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    display: none;
-    
 
-
-
-}
 #cart-bar-price{
     font-size: 20px;
     
@@ -539,8 +521,50 @@ input:hover{
 }
 
 
+/*maximum screen width<900px*/
+@media (max-width: 899px) {
+  .composed-footer {
+    padding-bottom: 70px; /* Adjust to match .cart-bar height */
+  }
+  /*cart*/
+ .cart-bar{
+    position: fixed;
+    z-index: 16;
+    bottom: 0;
+    background-color: rgb(17, 88, 92);
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-top: 1px solid white;
+
+}
+.Add-ons{
+    height: 60vh;
+}
+.char-block li{
+    display: flex;
+    gap: 20px;
+}
+.extra{
+    width: 25%;
+}
+/*javaScript css*/
+.cart-page-sm{
+    height: 100vh;
+}
+}
+
 /*screen width= 985px*/
 @media only screen and (min-width:900px){
+.Add-ons{
+    height: 70vh;
+}
+.cart-bar{
+    display: none;
+}
 .H-2{
     all:initial;
 }
@@ -706,13 +730,17 @@ header{
     overflow: hidden;
     transition: width 0.5s;
 
-
 }
 .cart-page-footer{
     width: 95%;
     left: 12px;
     bottom: 30px;
     border-radius: 20px;
+}
+
+/*javaScript css*/
+.cart-page-lg{
+    width: 40%;
 }
 }
 
@@ -771,12 +799,6 @@ header{
     
 }
 
-.cart-page-sm{
-    height: 100vh;
-}
-.cart-page-lg{
-    width:40%;
-}
 
 .body_no_scroll{
     overflow: hidden;

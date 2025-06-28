@@ -412,17 +412,23 @@ basket_icon_event_active= true;
 let cart_items_count_lg= document.querySelector(".cart-bar-items-count");
 let cart_page_elements_container= document.querySelector(".cart-page-elements");
 let item_name_container= document.querySelector(".block-name-js");
+let sm_cart_bar_price= document.querySelector(".sm-cart-bar-price");
+let sm_cart_bar_items_count= document.querySelector(".sm-cart-bar-items-count");
 
 
-cart_bar.addEventListener("click",()=>{
-       cart_page.classList.add("cart-page-sm");            
+cart_bar.addEventListener("click",()=>{ 
+       cart_page.classList.add("cart-page-sm");    
 });
 
 cart_bar_lg.addEventListener("click", ()=>{
     if(!basket_icon_event_active){
         return;
     }
+    //open the cart page for large screens
     cart_page.classList.toggle("cart-page-lg");
+
+    //open the cart page for small screens
+    cart_page.classList.add("cart-page-sm");
     //Diabling other events when cart page is displayed
     O_C_event_active = false;
     cat_slide_event_active = false;   
@@ -466,18 +472,25 @@ topping_checkbox.forEach(element=>{
 //Add to order button event
 //Manage the event for big screen and small screens separately
 add_to_cart.addEventListener("click", (event) => {
-    if (document.body.clientWidth > 900) {
         // Update cart price
         let amount_to_add = Number(initial_price.innerHTML);
         let current_cart_value = Number(cart_price_html.innerHTML);
         let updated_cart_value = (current_cart_value + amount_to_add).toFixed(2);
+
+        //big screen cart price
         cart_price_html.innerHTML = updated_cart_value;
+        //small screen cart price
+        sm_cart_bar_price.innerHTML = updated_cart_value;
+
 
         // Update cart items count
         let current_cart_quantity = Number(cart_items_count_lg.innerHTML);
         let quantity_to_add = Number(item_quantity.innerHTML);
         let updated_cart_quantity = current_cart_quantity + quantity_to_add;
+        //big screen cart items count
         cart_items_count_lg.innerHTML = updated_cart_quantity;
+        //small screen cart items count
+        sm_cart_bar_items_count.innerHTML = updated_cart_quantity;
 
         // Create cart item block
         let item_in_cart_block = document.createElement("div");
@@ -550,7 +563,7 @@ add_to_cart.addEventListener("click", (event) => {
 
         // Close the popup block after adding to cart
         if (O_C_exit) O_C_exit.click();
-    }
+    
 });
 
 
@@ -565,10 +578,16 @@ cart_page_elements_container.addEventListener("click", (event) => {
 
             // Update cart price and quantity
             let current_cart_value = Number(cart_price_html.innerHTML);
+            //big screen cart price
             cart_price_html.innerHTML = (current_cart_value - item_price).toFixed(2);
+            //small screen cart price
+            sm_cart_bar_price.innerHTML = (current_cart_value - item_price).toFixed(2);
 
             let current_cart_quantity = Number(cart_items_count_lg.innerHTML);
+            //big screen cart items count
             cart_items_count_lg.innerHTML = current_cart_quantity - item_quantity;
+            //small screen cart items count
+            sm_cart_bar_items_count.innerHTML = current_cart_quantity - item_quantity;
 
             // Remove the item block from the cart page elements
             item_block.remove();
@@ -576,8 +595,10 @@ cart_page_elements_container.addEventListener("click", (event) => {
             //code to close the cart page if the cart is empty
             // Optionally, check if cart is empty before closing
             if (!cart_page_elements_container.querySelector(".item-in-cart-block") ) {
+                //closing the  cart page for both small and large screens
                 body.classList.remove("html-js");
                 cart_page.classList.remove("cart-page-lg");
+                cart_page.classList.remove("cart-page-sm");
                 O_C_event_active = true;
                 cat_slide_event_active = true;   
                 ord_hours_event_active = true;
