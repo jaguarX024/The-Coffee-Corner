@@ -722,7 +722,6 @@ header{
     font-size: 16px;
 }
 .cart-page{
-    display: block;
     height: 85vh;
     margin-top: 15vh;
     right: 0;
@@ -749,7 +748,7 @@ header{
 
 /*js css*/
 .cat-slide-js{
-    height: 50vh;
+    height: 60vh;
     
 }
 .cat-arrow-js{

@@ -417,7 +417,7 @@ let sm_cart_bar_items_count= document.querySelector(".sm-cart-bar-items-count");
 
 
 cart_bar.addEventListener("click",()=>{ 
-       cart_page.classList.add("cart-page-sm");    
+       cart_bar_lg.click();  
 });
 
 cart_bar_lg.addEventListener("click", ()=>{
