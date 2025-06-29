@@ -25,7 +25,7 @@ let plus_minus_tracker;
 
 let cat_arrow_event = function () {
 
-    if (document.body.clientWidth <= 900) {
+    if (document.body.clientWidth < 900) {
         if (!cat_slide_event_active) {
             return;
         }
@@ -414,8 +414,20 @@ let cart_page_elements_container= document.querySelector(".cart-page-elements");
 let item_name_container= document.querySelector(".block-name-js");
 let sm_cart_bar_price= document.querySelector(".sm-cart-bar-price");
 let sm_cart_bar_items_count= document.querySelector(".sm-cart-bar-items-count");
+let sm_cart_exit= document.querySelector(".cart-exit");
 
 
+
+//event handler for the exit button in the small cart page
+sm_cart_exit.addEventListener("click", ()=>{
+     cart_page.classList.remove("cart-page-sm");
+     document.body.classList.remove("body_no_scroll");
+      body.classList.remove("html-js");
+      O_C_event_active = true;
+    cat_slide_event_active = true;   
+    ord_hours_event_active = true;
+
+});
 cart_bar.addEventListener("click",()=>{ 
        cart_bar_lg.click();  
 });

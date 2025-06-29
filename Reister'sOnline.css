@@ -247,30 +247,7 @@ footer{
    margin-bottom: 10px;
    position: relative;
 }
-.H-categories{
-    
-    position: absolute;
-    width: 360px;
-    z-index: 12;
-    background-color: white;
-    border-radius: 5px;
-    top: 12vh;
-    transition: height 0.5s;
-    height: 0;
-    overflow: hidden;
-    
-}
-.H-categories a{
-    text-decoration: none;
-    color: black;
-}
-.H-categories ul{
-    list-style-type: none;
-}
-.H-categories li{
-    border-bottom: 1px solid rgb(183, 179, 179);
-    padding: 15px 0;
-}
+
 /*Order characteristics*/
 .Add-ons{
     width: 400px;
@@ -555,10 +532,41 @@ input:hover{
 .cart-page-sm{
     height: 100vh;
 }
+.H-categories{
+    display: none;
+}
 }
 
-/*screen width= 985px*/
+/*screen width >= 900px*/
 @media only screen and (min-width:900px){
+
+.cart-exit{
+    display: none;
+}
+.H-categories{
+    
+    position: absolute;
+    width: 360px;
+    z-index: 12;
+    background-color: white;
+    border-radius: 5px;
+    top: 12vh;
+    transition: height 0.5s;
+    height: 0;
+    overflow: hidden;
+    
+}
+.H-categories a{
+    text-decoration: none;
+    color: black;
+}
+.H-categories ul{
+    list-style-type: none;
+}
+.H-categories li{
+    border-bottom: 1px solid rgb(183, 179, 179);
+    padding: 15px 0;
+}
 .Add-ons{
     height: 70vh;
 }
