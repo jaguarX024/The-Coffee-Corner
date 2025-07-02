@@ -5,12 +5,21 @@
     padding: 0;
 }
 
+
+
 /* Header css*/
+
 header{
-    margin:0 10%;
+    width: 100%;
     z-index: 40;
-    
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    background-color: white;
 }
+
 .site-header img{
    width: 50px;
    position: raltive;
@@ -22,6 +31,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    width: 80%;
     
 
 }
@@ -49,6 +59,16 @@ header{
     cursor: default;
     text-decoration: none;
 }
+.media3-link{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+.media3-link:hover{
+    background-color: rgb(240, 237, 237);
+    padding: 5px;
+}
 .ham-menu{
     
     width: 75%;
@@ -59,9 +79,10 @@ header{
     overflow: hidden;
     transition: max-height 1s;
     padding: 0 30px;
+    top: 100%;
     
 }
-.ham-menu .ham-menu_link:hover {
+.ham-menu .ham-menu-li:hover {
     background-color: rgb(248, 246, 246);
 }
 
@@ -84,6 +105,11 @@ header{
 .ham-menu a{
     text-decoration: none;
     color: rgb(99, 97, 97);
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+
 }
 
 .jobs-type {
@@ -379,7 +405,7 @@ header{
         display: flex; 
         flex-direction: column;
         position: absolute;
-        top: 15%;
+        top: 100%;
         background-color: white;
         width: 200px;
         border-top: 3px solid cyan;
