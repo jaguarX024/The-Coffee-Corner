@@ -33,7 +33,16 @@ let cat_arrow_event = function () {
         cat_arrow.classList.toggle("cat-arrow-js");
         html.classList.toggle("html-js");
         body.classList.toggle("body_no_scroll");
-
+        //stopping the other events from happening when the categories slide is active
+        if (cat_slide.classList.contains("cat-slide-js")) {
+            ord_hours_event_active = false;
+            O_C_event_active = false;
+        }
+        else{
+            //reversing the events when the categories slide is closed
+            ord_hours_event_active = true;
+            O_C_event_active = true;
+        }
         
     } else {
         if (!cat_slide_event_active) {
@@ -50,14 +59,40 @@ cat_arrow.addEventListener("click",cat_arrow_event );
 
 body.addEventListener("click", event=>{
 
-    //categories arrow event reaction to body click
-       if(!cat_arrow.contains(event.target)){
-            cat_arrow.classList.remove("cat-arrow-js");
-            H_categories.classList.remove("H-categories-js");
-
+    //reversing the categories click on large screens
+    if (cat_arrow.classList.contains("cat-arrow-js")) {
+        if (body.clientWidth >= 900) {
+                    if (H_categories.contains(event.target) && !event.target.closest(".H-categories-link")) {
+                           //do nothing
+                     }
+                     else{
+                          if (!cat_arrow.contains(event.target)){
+                               H_categories.classList.remove("H-categories-js");
+                               cat_arrow.classList.remove("cat-arrow-js");
+                           }  
+                     }
+        }else{
+        /*
+            if (cat_slide.contains(event.target) && !event.target.closest(".cat_slide_links")) {
+                //do nothing
+            }
+            else{
+                if (!cat_arrow.contains(event.target)){
+                    cat_slide.classList.remove("cat-slide-js");
+                    cat_arrow.classList.remove("cat-arrow-js");
+                    html.classList.remove("html-js");
+                    body.classList.remove("body_no_scroll");
+                    O_C_event_active = true;
+                    ord_hours_event_active = true;
+                }  
+            }
+                */
         }
+            
+    }
+       
         
-
+  
 
     if (!cat_slide.contains(event.target) && !cat_arrow.contains(event.target) &&
          !schedule_angle_down.contains(event.target)&&
@@ -66,6 +101,8 @@ body.addEventListener("click", event=>{
             cat_slide.classList.remove("cat-slide-js");
             if (document.body.clientWidth < 900){
                 cat_arrow.classList.remove("cat-arrow-js");
+                ord_hours_event_active = true;
+                O_C_event_active = true;
             }
                 
             html.classList.remove("html-js");
@@ -76,10 +113,15 @@ body.addEventListener("click", event=>{
             
     }
 
+    
+
     //hide the cart page when clicking outside of it
     if (!cart_page.contains(event.target) && cart_page.classList.contains("cart-page-lg") && !cart_bar_lg.contains(event.target) && !event.target.closest(".in-cart-delete")) {
         body.classList.remove("html-js");
         cart_page.classList.remove("cart-page-lg");
+        if (!cart_bar.contains(event.target)) {
+            cart_page.classList.remove("cart-page-sm");
+        }
         
         //code added to to make other events active after closing the cart page by clicking outside of it
         O_C_event_active = true;
@@ -138,7 +180,7 @@ schedule_angle_down.addEventListener("click", ()=>{
     H_categories.classList.remove("H-categories-js");
     body.classList.add("body_no_scroll");
 
-    if(window.innerWidth <=900)
+    if(window.innerWidth <900)
         {
             schedule_slide.classList.toggle("schedule-slide-display");
             schedule_angle_down.classList.toggle("cat-arrow-js");
@@ -166,6 +208,8 @@ cat_slide_links.forEach(element=>{
             cat_arrow.classList.toggle("cat-arrow-js");
             html.classList.toggle("html-js");
             body.classList.toggle("body_no_scroll");
+            O_C_event_active= true;
+            ord_hours_event_active=true;
     });
 });
 
@@ -420,6 +464,7 @@ let sm_cart_exit= document.querySelector(".cart-exit");
 
 //event handler for the exit button in the small cart page
 sm_cart_exit.addEventListener("click", ()=>{
+    cart_page.classList.remove("cart-page-lg");
      cart_page.classList.remove("cart-page-sm");
      document.body.classList.remove("body_no_scroll");
       body.classList.remove("html-js");
@@ -617,5 +662,67 @@ cart_page_elements_container.addEventListener("click", (event) => {
             }
 
         }
+    }
+});
+
+//handle screen resize events
+let lastScreenIsLarge= window.innerWidth >= 900;
+window.addEventListener("resize", () => {
+    const isLarge = window.innerWidth >= 900;
+    if (isLarge !== lastScreenIsLarge) {
+        // The screen crossed the 900px boundary!
+        if (isLarge) {
+            // Switched to large screen (>=900px)
+            
+            //handle the categories slide being open on small screens
+            
+            if(cat_slide.classList.contains("cat-slide-js")){
+                cat_slide.classList.toggle("cat-slide-js");
+                cat_arrow.classList.toggle("cat-arrow-js");
+                html.classList.toggle("html-js");
+                body.classList.toggle("body_no_scroll");
+                //Reactivating the other events when switching to large screens
+                ord_hours_event_active = true;
+                O_C_event_active = true;
+            }
+
+            //closing the schedule slide when switching to big screens
+            if (schedule_slide.classList.contains("schedule-slide-display")){
+                //stop all other events from happening
+                cat_slide_event_active=true;
+                O_C_event_active=true;
+                basket_icon_event_active=true;
+                body.classList.remove("body_no_scroll");
+                schedule_slide.classList.remove("schedule-slide-display");
+                schedule_angle_down.classList.remove("cat-arrow-js");
+                html.classList.remove("html-js");
+            }
+        
+            
+        } else {
+            // Switched to small screen (<900px)
+            //close the small screen cart page if the cart page is closed on large screens
+            if (!cart_page.classList.contains("cart-page-lg")) {
+                cart_page.classList.remove("cart-page-sm");
+            }
+
+            //closing the categories slide if it is open on large screens
+            if (H_categories.classList.contains("H-categories-js")) {
+                H_categories.classList.remove("H-categories-js");
+                cat_arrow.classList.remove("cat-arrow-js");
+            }
+            
+            //closing the schedule slide if it is open on large screens
+            if (schedule_slide.classList.contains("ord_hours_slide2-js")) {
+                schedule_slide.classList.remove("ord_hours_slide2-js");
+                schedule_angle_down.classList.remove("cat-arrow-js");
+                html.classList.remove("html-js");
+                body.classList.remove("body_no_scroll");
+                cat_slide_event_active = true;
+                O_C_event_active = true;
+                basket_icon_event_active = true;
+            }
+        }
+        lastScreenIsLarge = isLarge; // Update the tracker
     }
 });
