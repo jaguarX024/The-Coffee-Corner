@@ -23,6 +23,12 @@ main{
     color: white;
     padding: 10% 7% 0 ;
 }
+@media only screen and (min-width:980px){
+    main{
+    padding: 40px 0 0 0;
+    margin-top: 40px;
+}
+}
 
 .baker-description{
     color: white;

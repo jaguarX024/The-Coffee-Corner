@@ -40,7 +40,9 @@ searchBar_close.addEventListener("click",()=>{
 /*main page arrow button*/
 if (Arrowsroll){
 Arrowsroll.addEventListener("click",()=>{
-    window.scrollTo({top: 600, behavior:"smooth"});
+   if (window.scrollY < 600) {
+            window.scrollTo({top: 600, behavior: "smooth"});
+        }
 });
 }
 

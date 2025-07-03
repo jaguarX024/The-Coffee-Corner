@@ -6,9 +6,7 @@
 }
 
 /*about us main*/
-main{
-    margin-top: 10%;
-}
+
 .ourStory{
     padding: 15% 10%;
     background-color: rgb(25, 12, 12);
@@ -50,6 +48,9 @@ main{
 
 /* when width reaches 500px*/
 @media only screen and (min-width:500px){
+    main{
+    margin-top: 94px;
+}
 
     .ourStory{
         display: flex;
@@ -63,6 +64,9 @@ main{
 }
 
 @media only screen and (min-width:980px){
+    main{
+    margin-top: 144px;
+}
     .ourStory{
         padding-left:25%;
         padding-right: 25%;
