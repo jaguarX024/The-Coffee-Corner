@@ -11,10 +11,13 @@ let job_typesOptions= document.querySelector(".media3-jobsType");
 
 
 /*manages the header search bar*/
+if (ham_icon){
 ham_icon.addEventListener("click",()=>{
     ham_menu.classList.toggle("show-menu");
 });
+}
 
+if (searcIcon){
 searcIcon.addEventListener("click", ()=>{
     searchBar.classList.toggle("show-searchBar");
     searcIcon.classList.toggle("S-H-media3Links");
@@ -22,24 +25,34 @@ searcIcon.addEventListener("click", ()=>{
     media3_links_searchIcon.classList.toggle("S-H-media3Links");
     let jobs_arrow= document.querySelector("#jobTypes-Arrow");
 });
+}
 
+if(searchBar_close){
 searchBar_close.addEventListener("click",()=>{
     searchBar.classList.toggle("show-searchBar");
     searcIcon.classList.toggle("S-H-media3Links");
     ham_icon.classList.toggle("S-H-media3Links");
     media3_links_searchIcon.classList.toggle("S-H-media3Links");
 });
+}
+
 
 /*main page arrow button*/
+if (Arrowsroll){
 Arrowsroll.addEventListener("click",()=>{
     window.scrollTo({top: 600, behavior:"smooth"});
 });
+}
 
+
+if (job_arrow){
 job_arrow.addEventListener("click",()=>{
     job_typesOptions.classList.toggle("show-jobTypes");
     job_arrow.classList.toggle("jobs-arrow");
     
 });
+
+}
 
 
 //handle screen resize events

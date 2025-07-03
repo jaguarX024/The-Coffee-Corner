@@ -6,22 +6,8 @@
 }
 
 /*about us main*/
-#about-us{
-    display: flex;
-    justify-content: center;
-    height: 40vh;
-    background: url("MainImages/coffee_display.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-   
-}
-
-#aobut-us-text h1{
-    color: white;
-    font-weight: bold;
-    margin-top: 50%;
-    
+main{
+    margin-top: 10%;
 }
 .ourStory{
     padding: 15% 10%;
