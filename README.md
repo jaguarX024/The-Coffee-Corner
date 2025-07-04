@@ -1,4 +1,4 @@
-# The Coffee Corner Website
+# Tempo
 
 Welcome to **The Coffee Corner** website! This is an interactive, front-end web project for a local coffee shop, designed to showcase the shop's offerings and provide a user-friendly experience for visitors.
 
