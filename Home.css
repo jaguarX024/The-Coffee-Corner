@@ -1,15 +1,17 @@
-*{
+/* 
+  Main stylesheet for The Coffee Corner Home page.
+*/
+
+/* ----- Reset and Base Styles ----- */
+* {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-
-
-/* Header css*/
-
-header{
+/* ----- Header Styles ----- */
+header {
     width: 100%;
     z-index: 40;
     position: fixed;
@@ -20,57 +22,77 @@ header{
     background-color: white;
 }
 
-.site-header img{
-   width: 50px;
-   position: raltive;
-   left: 0;
-   margin-left: 0;
+.site-header img {
+    width: 50px;
+    position: relative; 
+    left: 0;
+    margin-left: 0;
+    border-radius: 100%; 
 }
-.header-main{
+
+.header-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     width: 80%;
-    
+}
 
-}
-/* coffee shop logo*/
-.header-main img{
-    border-radius: 100%;
-}
-#media3-links{
+/* ----- Navigation Styles ----- */
+
+/* Main navigation links (hidden by default, shown on large screens) */
+#media3-links {
     display: none;
 }
-
-/*outline links in the main page header when the cursor is pointing at them*/
-#media3-links a:hover{
-   text-decoration: underline;
-}
-#media3-jobOptions li:hover{
-    background-color: rgb(247, 245, 245);
-    
-}
-#media3-jobOptions li a:hover{
+#media3-links a {
     text-decoration: none;
+    color: gray;
+}
+#media3-links a:hover {
+    text-decoration: underline;
 }
 
-.media3-jobs2 a:hover{
+/* Jobs dropdown in main nav */
+.media3-jobs2 a:hover {
     cursor: default;
     text-decoration: none;
 }
-.media3-link{
+.media3-jobs2 i {
+    border-radius: 100%;
+    padding: 2px;
+}
+#jobTypes-Arrow:hover {
+    background-color: rgb(237, 234, 234);
+    cursor: default;
+}
+.media3-link {
     width: 100%;
     height: 100%;
     display: block;
     position: relative;
 }
-.media3-link:hover{
+.media3-link:hover {
     background-color: rgb(240, 237, 237);
     padding: 5px;
 }
-.ham-menu{
-    
+#media3-jobOptions li:hover {
+    background-color: rgb(247, 245, 245);
+}
+#media3-jobOptions li a:hover {
+    text-decoration: none;
+}
+
+/* Hamburger menu icon (shown on small screens) */
+#ham-icon {
+    padding: 5px;
+    border-radius: 100%;
+}
+#ham-icon:hover {
+    background-color: rgb(234, 232, 232);
+}
+
+/* Hamburger menu dropdown */
+.ham-menu {
     width: 75%;
     position: absolute;
     left: 12%;
@@ -80,128 +102,80 @@ header{
     transition: max-height 1s;
     padding: 0 30px;
     top: 100%;
-    
 }
-.ham-menu .ham-menu-li:hover {
-    background-color: rgb(248, 246, 246);
-}
-
-#ham-icon{
-    padding: 5px;
-    border-radius: 100%;
-
-}
-#ham-icon:hover{
-    background-color: rgb(234, 232, 232);
-}
-.ham-menu ul{
+.ham-menu ul {
     list-style-type: none;
 }
-.ham-menu ul li{
+.ham-menu ul li {
     margin-bottom: 5px;
     border-bottom: 1px solid rgb(241, 238, 238);
     padding: 10px;
 }
-.ham-menu a{
+.ham-menu .ham-menu-li:hover {
+    background-color: rgb(248, 246, 246);
+}
+.ham-menu a {
     text-decoration: none;
     color: rgb(99, 97, 97);
     width: 100%;
     height: 100%;
     display: block;
     position: relative;
-
 }
 
-.jobs-type {
-    margin-left: 20px;
-}
-
-.jobs2{
+/* Hamburger menu jobs dropdown */
+.jobs2 {
     border-bottom: 1px solid rgb(237, 233, 233);
     height: 2em;
     padding: 5px;
-    
 }
-#jobs{
+.jobs-type {
+    margin-left: 20px;
+}
+#jobs {
     border-bottom: 0;
     margin-bottom: 0;
     padding: 0;
 }
-.search-bar{
-    width: 45%;
-    position: absolute;
-    right:5%;
-    top:20px;
-    /*changed the height, remember to change it*/
-    height: 0;
-    overflow: hidden;
-    
-}
 
-#searchBar-close:hover{
-    background-color: rgb(243, 243, 243);
-    border-radius: 100%;
-}
-.search-bar input{
-    width: 90%; 
-    outline: none;
-    border: none;
-}
-/* search icon in the main page*/
-#search-icon{
-    border-radius: 100%;
-    padding: 5px;
-}
-.S-H-icons{
+/* Header icon container */
+.S-H-icons {
     display: flex;
 }
 .S-H-icons i {
     margin: 10px;
 }
 
-/* Making header icons responsive to hover and changing their border radius*/
-#jobTypes-Arrow{
+/* ----- Search Bar Styles ----- */
+.search-bar {
+    width: 45%;
+    position: absolute;
+    right: 5%;
+    top: 20px;
+    height: 0;
+    overflow: hidden;
+}
+.search-bar input {
+    width: 90%;
+    outline: none;
+    border: none;
+}
+#searchBar-close:hover {
+    background-color: rgb(243, 243, 243);
     border-radius: 100%;
-    padding: 2px;
 }
-#jobTypes-Arrow:hover{
-    background-color: rgb(237, 234, 234);
-    cursor: default;
+#search-icon {
+    border-radius: 100%;
+    padding: 5px;
 }
-
-#search-icon:hover{
+#search-icon:hover {
     background-color: rgb(247, 244, 244);
 }
 
-/* Main content css*/
-.main-img1{
-    height: 60vh;
-    background: url('MainImages/coffee\ and\ book\ display.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.main-img2{
-    height: 50vh;
-    background: url('MainImages/coffe\ and\ croissant.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.main-img3{
-    height: 60vh;
-    background: url('MainImages/coffee-streets.avif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+/* ----- Main Content Styles ----- */
 
-#shop-name{
-    color: white;
-    width: 400px;
-    
-}
-.shop-name-container{
+/* Shop name section with background */
+.shop-name-container {
     background: url('MainImages/coffeee\ station.jpeg');
     width: 100%;
     height: 60vh;
@@ -213,31 +187,55 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
 }
-#scroll-arrow{
+#shop-name {
+    color: white;
+    width: 400px;
+}
+
+/* Scroll down arrow button */
+#scroll-arrow {
     position: absolute;
     bottom: 30%;
     left: 50%;
     background: transparent;
     border: none;
 }
-#scroll-arrow i{
+#scroll-arrow i {
     font-size: 50px;
     color: white;
-    
 }
 
-.menu-link-container{
+/* Main images for homepage (hidden on large screens) */
+.main-img1,
+.main-img2,
+.main-img3 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main-img1 {
+    height: 60vh;
+    background: url('MainImages/coffee\ and\ book\ display.webp');
+}
+.main-img2 {
+    height: 50vh;
+    background: url('MainImages/coffe\ and\ croissant.webp');
+}
+.main-img3 {
+    height: 60vh;
+    background: url('MainImages/coffee-streets.avif');
+}
+
+/* Full menu button section */
+.menu-link-container {
     height: 40vh;
     background: url('MainImages/window\ coffe.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
-#full-menu{
+#full-menu {
     background-color: rgb(248, 161, 129);
     border: none;
     padding: 10px;
@@ -248,35 +246,35 @@ header{
     color: white;
     cursor: pointer;
 }
-.main-schedule{
+
+/* Schedule section with background */
+.main-schedule {
     height: 80vh;
-    background: url('MainImages/frappucino.jpg') ;
+    background: url('MainImages/frappucino.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 20px;
-    
 }
-.main-schedule h2{
+.main-schedule h2 {
     font-size: 40px;
     color: white;
     margin-bottom: 20%;
     position: relative;
     top: 30px;
-    
 }
-.main-schedule p{
+.main-schedule p {
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: bold;
 }
-.schedule-text-color{
+.schedule-text-color {
     color: rgb(229, 86, 34);
 }
-.schedule-NoColor{
+.schedule-NoColor {
     color: white;
 }
-#main-schedule-menu{
+#main-schedule-menu {
     background-color: rgb(248, 161, 129);
     border: none;
     padding: 10px;
@@ -287,46 +285,43 @@ header{
     margin: 20px 0;
     cursor: pointer;
 }
-.main-contact{
+
+/* Contact section */
+.main-contact {
     padding: 30px;
     background-color: black;
-    
-
 }
-
-.main-contact h2{
+.main-contact h2 {
     font-size: 2em;
     color: white;
     margin-bottom: 20px;
     font-weight: bold;
 }
-.main-contact div{
+.main-contact div {
     margin-bottom: 30px;
 }
-.contact-text-color{
+.contact-text-color {
     margin-bottom: 20px;
     color: rgb(229, 86, 34);
     font-weight: bold;
     font-size: 16px;
 }
-.contact-text-Nocolor{
+.contact-text-Nocolor {
     color: white;
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 20px;
 }
-.media3-backgroundImg1{
-    display: none;
-}
-.media3-backgroundImg2{
-    display: none;
-}
-.media3-backgroundImg3{
+
+/* Hide background images by default (shown on large screens) */
+.media3-backgroundImg1,
+.media3-backgroundImg2,
+.media3-backgroundImg3 {
     display: none;
 }
 
-/*main footer*/
-.main-footer{
+/* ----- Footer Styles ----- */
+.main-footer {
     height: 7vh;
     display: flex;
     justify-content: center;
@@ -334,75 +329,65 @@ header{
     gap: 20px;
     background-color: rgb(42, 41, 41);
 }
-.main-footer i{
+.main-footer i {
     color: rgb(101, 100, 100);
     font-size: 20px;
     cursor: pointer;
 }
 
-@media only screen and (min-width:631px){
-    .shop-name-container{
+/* ----- Responsive Styles ----- */
+
+/* Medium screens: increase font and shop name width */
+@media only screen and (min-width:631px) {
+    .shop-name-container {
         font-size: 30px;
     }
-    #shop-name{
+    #shop-name {
         width: 500px;
     }
 }
 
-@media only screen and (min-width:980px){
-    .header-main img{
+/* Large screens: show nav links, adjust layout, show background images */
+@media only screen and (min-width:980px) {
+    .header-main img {
         width: 100px;
     }
-    #ham-icon{
+    #ham-icon {
         display: none;
     }
-    #media3-links{
-       display: flex;
+    #media3-links {
+        display: flex;
         list-style-type: none;
         gap: 25px;
         justify-content: center;
         align-items: center;
-        
     }
-    #media3-links a{
-        text-decoration: none;
-    }
-    .media3-links-searchIcon{
-        display: flex; 
+    .media3-links-searchIcon {
+        display: flex;
         gap: 10px;
     }
-    
-    #media3-links a{
-        color: gray;
-    }
-
-    /* Main page job option arrow*/
-    .media3-jobs2 i{
-        font-size:10px;
+    .media3-jobs2 i {
+        font-size: 10px;
         padding-left: 0;
         margin: 0;
         cursor: pointer;
     }
-
-    
-    
-    .search-bar{
+    .search-bar {
         width: 65%;
     }
-    .search-bar input{
+    .search-bar input {
         width: 90%;
         font-size: 16px;
     }
-    .search-bar  i{
+    .search-bar i {
         font-size: 18px;
         color: gray;
     }
-
-    .media3-jobsType{
+    .media3-jobsType {
         display: none;
     }
-    #media3-jobOptions{
-        display: flex; 
+    #media3-jobOptions {
+        display: flex;
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -410,104 +395,97 @@ header{
         width: 200px;
         border-top: 3px solid cyan;
         padding: 25px;
-
     }
-    #media3-jobOptions #media3-baker{
+    #media3-jobOptions #media3-baker {
         margin-bottom: 15px;
     }
-
-    #media3-jobOptions li{
+    #media3-jobOptions li {
         list-style-type: none;
     }
-   .shop-name-container{
-    height: 80vh;
-   }
-   #scroll-arrow{
-    bottom: 5%;
-    left: 50%;
-   }
-   .menu-link-container{
-    height: 60vh;
-   }
-   #full-menu{
-    width: 150px;
-    font-size: 15px;
-    color: white;
-    font-weight: bold;
-   }
-   
-   #media3-images{
-    width: 100%;
-    height: 70vh;
-    display: grid;
-    grid-template-columns: 33.4% 33.3% 33.3%;
-   }
-   .media3-backgroundImg1{
-    display: block;
-    background: url('MainImages/coffee\ and\ book\ display.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-   }
-   .media3-backgroundImg2{
-    display: block;
-    background: url('MainImages/coffe\ and\ croissant.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-   }
-   .media3-backgroundImg3{
-    display: block;
-    background: url('MainImages/coffee-streets.avif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-   }
-   .schedule-contact{
-    display: grid;
-    grid-template-columns: 50% 50%;
-   }
-   .main-schedule{
-    padding-top: 0;
-   }
-   .main-img1{
-    display: none;
-   }
-   .main-img2{
-    display: none;
-   }
-   .main-img3{
-    display: none;
-   }
+    .shop-name-container {
+        height: 80vh;
+    }
+    #scroll-arrow {
+        bottom: 5%;
+        left: 50%;
+    }
+    .menu-link-container {
+        height: 60vh;
+    }
+    #full-menu {
+        width: 150px;
+        font-size: 15px;
+        color: white;
+        font-weight: bold;
+    }
+    #media3-images {
+        width: 100%;
+        height: 70vh;
+        display: grid;
+        grid-template-columns: 33.4% 33.3% 33.3%;
+    }
+    .media3-backgroundImg1 {
+        display: block;
+        background: url('MainImages/coffee\ and\ book\ display.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .media3-backgroundImg2 {
+        display: block;
+        background: url('MainImages/coffe\ and\ croissant.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .media3-backgroundImg3 {
+        display: block;
+        background: url('MainImages/coffee-streets.avif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .schedule-contact {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .main-schedule {
+        padding-top: 0;
+    }
+    .main-img1,
+    .main-img2,
+    .main-img3 {
+        display: none;
+    }
 }
 
+/* ----- Classes for JavaScript toggling ----- */
 
-
-
-
-/*  javascript css */
-
-
-
-.show-menu{
+/* Show hamburger menu */
+.show-menu {
     max-height: 300px;
     border-top: 3px solid cyan;
 }
 
-.show-searchBar{
-height: 22px;
-transform: translate(0,20px);
-transition: transform 1s;
-
+/* Show search bar overlay */
+.show-searchBar {
+    height: 22px;
+    transform: translate(0, 20px);
+    transition: transform 1s;
 }
-.S-H-media3Links{
+
+/* Hide media3 links (for mobile) */
+.S-H-media3Links {
     height: 0;
     overflow: hidden;
 }
-.show-jobTypes{
+
+/* Show job types dropdown */
+.show-jobTypes {
     display: flex;
 }
-.jobs-arrow{
-   transform: rotate(180deg);
-   
+
+/* Rotate jobs arrow icon */
+.jobs-arrow {
+    transform: rotate(180deg);
 }

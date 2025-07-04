@@ -1,3 +1,4 @@
+/* ===================== GLOBAL RESETS ===================== */
 *{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -5,14 +6,11 @@
     padding: 0;
 }
 
-/*about us main*/
-
+/* ===================== ABOUT US MAIN SECTION ===================== */
 .ourStory{
     padding: 15% 10%;
     background-color: rgb(25, 12, 12);
     position: relative;
-   
-    
 }
 .ourStory img{
     width: 100%;
@@ -23,14 +21,14 @@
     font-weight: bold;
     text-align: center;
     margin-bottom: 5%;
-
 }
+
+/* ===================== STORY DESCRIPTION ===================== */
 .story-description p{
     color: white;
-    line-height:2;
+    line-height: 2;
     text-align: center;
     font-size: 18px;
-   
 }
 .question{
     font-weight: bold;
@@ -40,50 +38,44 @@
 .description{
     margin-bottom: 20%;
 }
+
+/* ===================== MAIN IMAGES ===================== */
 .main-images{
     width: 100%;
     display: grid;
 }
 
-
-/* when width reaches 500px*/
+/* ===================== RESPONSIVE: MIN WIDTH 500PX ===================== */
 @media only screen and (min-width:500px){
     main{
-    margin-top: 94px;
-}
-
+        margin-top: 94px;
+    }
     .ourStory{
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding-left: 10%;
         padding-right: 10%;
-        
-       }
-       
+    }
 }
 
+/* ===================== RESPONSIVE: MIN WIDTH 980PX ===================== */
 @media only screen and (min-width:980px){
     main{
-    margin-top: 144px;
-}
+        margin-top: 144px;
+    }
     .ourStory{
-        padding-left:25%;
+        padding-left: 25%;
         padding-right: 25%;
     }
     .main-images-container{
         display: grid;
         grid-template-columns: 50% 50%;
-
     }
     #about-us{
         display: flex;
         justify-content: center;
         height: 50vh;
     }
-   
 }
-
-
-/*js css*/
 

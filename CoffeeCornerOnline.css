@@ -1,14 +1,18 @@
+/* Reset and box-sizing */
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* Main content margin for mobile */
 main{
     margin-top: 30%;
 }
 
-/*header*/
+/* ================= HEADER STYLES ================= */
+
+/* Header container */
 header{
     position: fixed;
     width: 100%;
@@ -16,6 +20,8 @@ header{
     top: 0;
     background-color: white;
 }
+
+/* Header first row: logo and login */
 .H-1{
     display: flex;
     background-color: rgb(17, 88, 92);
@@ -23,9 +29,10 @@ header{
     align-items: center;
     padding: 10px;
 }
+
+/* Header images */
 header img{
     width: 100%;
-    
 }
 #clover-image {
     width: 60px;
@@ -33,7 +40,8 @@ header img{
     max-width: 60px;
 }
 #clover-logo{
-    width: 100%;
+    width: 100px;
+    margin: 10px;
 }
 #log-in-icon{
     width: 30px;
@@ -41,9 +49,9 @@ header img{
     border: none;
     border-radius: 50%;
     max-height: 30px;
-   
 }
 
+/* Logo link styling */
 .clover a{
     text-decoration: none;
     color: white;
@@ -53,11 +61,14 @@ header img{
     cursor: pointer;
 }
 
+/* Login hover effect */
 .log-in:hover{
     background-color: rgb(44, 71, 73);
     padding: 5px;
     border-radius: 10%;
 }
+
+/* Logo and login flex */
 .clover, .log-in{
     display: flex;
     justify-content: space-between;
@@ -67,6 +78,8 @@ header img{
     font-weight: bold;
     gap: 10px;
 }
+
+/* Header second row: categories */
 .H-2{
     font-size: 20px;
     font-weight: bold;
@@ -84,6 +97,9 @@ header img{
     font-size: 14px;
     margin-left: 5px;
 }
+
+/* ================= STORE INFO & SCHEDULE ================= */
+
 .online-infos{
     display: flex;
     flex-direction: column;
@@ -92,10 +108,6 @@ header img{
     align-items: center;
     padding-top: 7%;
     text-align: center;
-}
-#clover-logo{
-    width: 100px;
-    margin: 10px;
 }
 .schedule-displayer{
     display: flex;
@@ -115,7 +127,8 @@ header img{
     justify-content: center;
 }
 
-/*order options*/
+/* ================= ORDER OPTIONS ================= */
+
 .order-options{
     margin-top: 10%;
 }
@@ -134,7 +147,6 @@ header img{
 }
 .item-name{
     font-size: 20px;
-
 }
 .cat-blocks{
     padding: 0 20px;
@@ -145,7 +157,8 @@ header img{
     gap: 25px;
 }
 
-/*footer*/
+/* ================= FOOTER & CART BAR ================= */
+
 footer{
     text-align: center;
     background-color: rgb(17, 88, 92);
@@ -154,7 +167,6 @@ footer{
     font-size: 18px;
     line-height: 1.5em;
     bottom: 0;
-    
 }
 .cart-icon{
     display: none;
@@ -163,9 +175,9 @@ footer{
     display: none;
 }
 
+/* ================= HIDDEN ELEMENTS & SLIDES ================= */
 
-
-/*hidden elements*/
+/* Categories slide (mobile) */
 .cat-slide{
     position: fixed;
     z-index: 12;
@@ -178,7 +190,6 @@ footer{
     overflow: hidden;
     padding-top: 10px;
     transition: height 0.3s;
-    
 }
 .cat-angle-down{
     transition: transform 0.3s;
@@ -186,7 +197,6 @@ footer{
 #cat-slide-header{
     font-weight: bold;
     text-align: center;
-
 }
 .cat_slide_links{
     width: 100%;
@@ -194,11 +204,9 @@ footer{
     display: block;
     padding: 3px 10px;
 }
-
 .cat-list{
     list-style-type: none;
     padding: 10px 15px;
-    
 }
 .cat-list li{
     padding: 15px 15px;
@@ -215,6 +223,8 @@ footer{
 #bagels{
     border-bottom: none;
 }
+
+/* Ordering hours slide */
 .Ord-hours-slide{
     padding: 0 20px 0 20px ;
     position: fixed;
@@ -231,11 +241,9 @@ footer{
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-   
 }
 .schedule-list{
     list-style-type: none;
-
 }
 .day-shedule{
     display: flex;
@@ -244,7 +252,6 @@ footer{
     justify-content: space-between;
     margin-bottom: 15px;
 }
-
 .exit{
    display: flex;
    justify-content: end;
@@ -254,7 +261,8 @@ footer{
    position: relative;
 }
 
-/*Order characteristics*/
+/* ================= ORDER CHARACTERISTICS (MODALS) ================= */
+
 .Add-ons{
     width: 400px;
     border-radius: 10px;
@@ -270,7 +278,6 @@ footer{
 }
 .Add-ons ul{
     list-style-type: none;
-   
 }
 .Add-ons .exit{
     font-size: 25px;
@@ -299,7 +306,6 @@ footer{
 .checkbox-group{
     display: flex;
     gap: 15px;
-    
 }
 .char-block input{
     width: 2em;
@@ -341,8 +347,6 @@ footer{
     background-color: rgb(232, 244, 214);
     font-size: 18px;
     font-weight: bold;
-
-    
 }
 .quantity p{
     display: flex;
@@ -351,7 +355,6 @@ footer{
     width: 100%;
 }
 .quantity i{
-    
     color: gray;
     font-size: 14px;
 }
@@ -360,7 +363,6 @@ footer{
 }
 .scroll-bar{
    overflow: auto;
-   
 }
 .latteLIke-Char{
     display: none;
@@ -401,12 +403,10 @@ input:hover{
     cursor: pointer;
 }
 
-
-
+/* ================= CART BAR & CART PAGE ================= */
 
 #cart-bar-price{
     font-size: 20px;
-    
 }
 .cart-bar-logo-container i{
     font-size: 27px;
@@ -419,7 +419,6 @@ input:hover{
     border-radius: 50%;
     font-size: 3px;
     position: relative;
-
 }
 .cart-bar-logo-container{
     display: flex;
@@ -444,9 +443,6 @@ input:hover{
     overflow: hidden;
     transition: height 1s;
     box-shadow: 3px 3px 20px gray;
-
-    
-    
 }
 .cart-page-header{
     width: 100%;
@@ -471,7 +467,6 @@ input:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 .cart-page-footer:hover{
     background-color: rgb(22, 76, 79);
@@ -498,18 +493,18 @@ input:hover{
     display: flex;
 }
 
-/*fixing scroll id's*/
+/* Fixing scroll id's for anchor links */
 #link_to_coffee, #link_to_tea, #link_to_beverages {
   scroll-margin-top: 200px; 
 }
 
+/* ================= RESPONSIVE: MAX WIDTH 899PX ================= */
 
-/*maximum screen width<900px*/
 @media (max-width: 899px) {
   .composed-footer {
     padding-bottom: 70px; /* Adjust to match .cart-bar height */
   }
-  /*cart*/
+  /* Cart bar for mobile */
  .cart-bar{
     position: fixed;
     z-index: 16;
@@ -522,7 +517,6 @@ input:hover{
     align-items: center;
     color: white;
     border-top: 1px solid white;
-
 }
 .Add-ons{
     height: 60vh;
@@ -534,7 +528,7 @@ input:hover{
 .extra{
     width: 25%;
 }
-/*javaScript css*/
+/* JavaScript: cart page open */
 .cart-page-sm{
     height: 100vh;
 }
@@ -543,13 +537,13 @@ input:hover{
 }
 }
 
-/*screen width >= 900px*/
+/* ================= RESPONSIVE: MIN WIDTH 900PX ================= */
+
 @media only screen and (min-width:900px){
 .cart-page-header i{
     display: none;
 }
 .H-categories{
-    
     position: absolute;
     width: 360px;
     z-index: 12;
@@ -559,7 +553,6 @@ input:hover{
     transition: height 0.5s;
     height: 0;
     overflow: hidden;
-    
 }
 .H-categories a{
     text-decoration: none;
@@ -570,7 +563,6 @@ input:hover{
     height: 100%;
     padding: 5px 10px;
 }
-
 .H-categories ul{
     list-style-type: none;
 }
@@ -618,19 +610,16 @@ header{
     font-size: 18px;
     font-weight: bold;
 }
-
 .H-1 p{
     font-size: 28px;
 }
 .cart-icon i{
     font-size: 25px;
-    
 }
 .H1-H2{
     display: flex;
     align-items: center;
     gap:2em;
-
 }
 .online-infos{
     display: flex;
@@ -638,8 +627,6 @@ header{
     padding-left: 30px;
     padding-top: 20vh;
     justify-content: center;
-    
-   
 }
 .log-in-2{
     display: flex;
@@ -650,8 +637,6 @@ header{
     justify-content: center;
     border: 1px solid rgb(230, 228, 228);
     align-self: center;
-    
-    
 }
 .log-in-2:hover{
     cursor: pointer;
@@ -670,7 +655,6 @@ header{
     gap: 20px;
     width: 12%;
     justify-content: center;
-    
 }
 .Hor-clo-ang{
     display: flex;
@@ -680,7 +664,6 @@ header{
 .online-infos h2{
     font-size: 30px;
     margin-bottom: 10px;
-
 }
 .store-address{
     line-height: 25px;
@@ -703,7 +686,6 @@ header{
     width: 500px;
     display: none;
     padding: 20px 20px 0 22px;
-
 }
 .Add-ons{
     width: 500px;
@@ -718,9 +700,8 @@ header{
 }
 .scroll-bar{
     overflow: auto;
-    
- }
- main{
+}
+main{
     margin-top: 10%;
 }
 .H-2-cart-bar{
@@ -738,7 +719,6 @@ header{
     position: relative;
     left: -13px;
     top:15px;
-    
 }
 .cart-bar-counter p{
     font-size: 16px;
@@ -750,7 +730,6 @@ header{
     width: 0;
     overflow: hidden;
     transition: width 0.5s;
-
 }
 .cart-page-footer{
     width: 95%;
@@ -758,74 +737,60 @@ header{
     bottom: 30px;
     border-radius: 20px;
 }
-
-/*javaScript css*/
+/* JavaScript: cart page open (large) */
 .cart-page-lg{
     width: 40%;
 }
 }
 
+/* ================= JS/STATE CLASSES ================= */
 
-
-
-/*js css*/
+/* Categories slide open */
 .cat-slide-js{
     height: 50vh;
-    
 }
 .cat-arrow-js{
     transform: rotate(180deg);
 }
-
 .html-js{
     background-color: rgb(156, 156, 156);
     z-index: -2;
 }
-
 .schedule-slide-display{
     height: 50vh;
-
 }
-
 .H-categories-js{
     height: 25vh;
     box-shadow: 0 5px 10px rgb(205, 201, 201);
     overflow: auto;
     padding: 15px 15px;
-
 }
 .ord_hours_slide2-js{
     display: block;
 }
-
 .block-display-js{
     display: block;
 }
-
 .no-scroll{
     overflow: hidden;
 }
-
 .cart_item_row{
     display: flex;
     justify-content: space-between;
     padding: 20px;
     border-bottom: 1px solid black;
-
 }
 .C_price_delete{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
-
-
 .body_no_scroll{
     overflow: hidden;
 }
 
-/*cart page elements css*/
+/* ================= CART PAGE ELEMENTS ================= */
+
 .item-in-cart-block{
     display: flex;
     flex-direction: column;
@@ -833,7 +798,6 @@ header{
     border-bottom: 1px solid rgb(190, 186, 186);
     padding: 20px;
 }
-
 .first-block{
     display: flex;
     justify-content: space-between;
@@ -843,18 +807,15 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 .in-cart-plus-minus{
     display: none;
 }
-
 .in-cart-delete:hover{
     padding: 2px;
     border-radius: 100%;
     background-color: rgb(175, 172, 172);
 }
-
 .toppings-block{
     width: 80%;
 }
