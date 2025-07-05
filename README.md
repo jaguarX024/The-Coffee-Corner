@@ -29,6 +29,11 @@ This website allows users to:
 ## Getting Started
 
 To view the website:
+
+**Option1:**
+Go to: https://jaguarx024.github.io/The-Coffee-Corner/Home.html
+
+**Option 2:**
 1. Clone or download the repository.
 2. Open `Home.html` in your web browser.
 3. Navigate through the pages using the menu.
